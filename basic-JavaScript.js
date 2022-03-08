@@ -459,6 +459,113 @@ if (num > 15) {
     return "Between 5 and 15";
   }
 
+// -->> GOLF-CODE.js <<--
+
+// Selecting from Many Options with Switch Statements
+
+switch(lowercaseLetter) {
+    case "a":
+      console.log("A");
+      break;
+    case "b":
+      console.log("B");
+      break;
+  }
+
+/* 
+case values are tested with strict equality (===). The break tells JavaScript to stop executing statements. If the break is omitted, the next statement will be executed.
+
+
+Write a switch statement which tests val and sets answer for the following conditions:
+1 - alpha
+2 - beta
+3 - gamma
+4 - delta
+*/
+
+function caseInSwitch(val) {
+    let answer = "";
+    // Only change code below this line
+  
+    switch(val) {
+      case 1:
+        answer = "alpha";
+        break;
+    }
+  
+    switch(val) {
+      case 2:
+        answer = "beta";
+        break;
+    }
+  
+    switch(val) {
+      case 3:
+        answer = "gamma";
+        break;
+    }
+  
+    switch(val) {
+      case 4:
+        answer = "delta";
+        break;
+    }  
+    // Only change code above this line
+    return answer;
+  }
+  
+  caseInSwitch(1);
+
+ // definitely don't get this case/switch shit
+ 
+ /*
+ In a switch statement you may not be able to specify all possible values as case statements. Instead, you can add the default statement which will be executed if no matching case statements are found. Think of it like the final else statement in an if/else chain.
+
+switch (num) {
+  case value1:
+    statement1;
+    break;
+  case value2:
+    statement2;
+    break;
+...
+  default:
+    defaultStatement;
+    break;
+}
+ */
+
+function switchOfStuff(val) {
+    let answer = "";
+    // Only change code below this line
+  
+      switch(val) {
+        case "a":
+          answer = "apple";
+          break;
+        case "b":
+          answer = "bird";
+          break;
+        case "c":
+          answer = "cat";
+          break;
+        default:
+          answer = "stuff";
+          break;
+      } 
+  
+    // Only change code above this line
+    return answer;
+  }
+  
+  switchOfStuff(1);
+
+  
+
+
+
+
+
 
 
 
