@@ -289,6 +289,32 @@ const ourArray8 = ["Stimpson", "J", "cat"];
 ourArray8.shift();
 ourArray8.unshift("Happy");
 
+// functions
+
+function functionName() {
+    console.log("Hello World");
+  }
+
+  functionName();
+
+/*
+Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or "passed") into a function when it is called are known as arguments.
+*/
+
+function testFun(param1, param2) {
+    console.log(param1, param2);
+  }
+
+testFun("this is one param", "this is another")
+
+// We can pass values into a function with arguments. You can use a return statement to send a value back out of a function.
+
+function plusThree(num) {
+    return num + 3;
+  }
+  
+const answer9 = plusThree(5);
+console.log(answer9)
 
 
 
