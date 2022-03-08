@@ -74,9 +74,9 @@ i--;
 
 // The remainder operator % gives the remainder of the division of two numbers.
 
-let myVar = 1;
-myVar += 5;
-console.log(myVar);
+let myVar2 = 1;
+myVar2 += 5;
+console.log(myVar2);
 // 6 would be displayed in the console.
 
 /*
@@ -95,13 +95,13 @@ myVar *= 5;
 myVar /= 5;
 */
 
-let a = 11;
-let b = 9;
-let c = 3;
+let a2 = 11;
+let b2 = 9;
+let c2 = 3;
 
-a -= 6;
-b *= 15;
-c += 1;
+a2 -= 6;
+b2 *= 15;
+c2 += 1;
 
 /*
 Escaping Literal Quotes in Strings
@@ -128,7 +128,7 @@ Code	Output
 \f	form feed
 */
 
-const myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
+const myStr2 = "FirstLine\n\t\\SecondLine\nThirdLine";
 
 // concatinate
 
@@ -136,27 +136,27 @@ const ourStr = "I come first. " + "I come second.";
 
 // another option >> 
 
-let myStr = "This is the first sentence. ";
-myStr += "This is the second sentence.";
+let myStr3 = "This is the first sentence. ";
+myStr3 += "This is the second sentence.";
 
 // more examples
 
-const ourName = "freeCodeCamp";
-const ourStr = "Hello, our name is " + ourName + ", how are you?";
+const ourName4 = "freeCodeCamp";
+const ourStr4 = "Hello, our name is " + ourName4 + ", how are you?";
 
-const myName = "secret name here";
-const myStr = "My name is " + myName + " and I am well!";
+const myName4 = "secret name here";
+const myStr4 = "My name is " + myName4 + " and I am well!";
 
 // more building strings examples >> 
 
-const anAdjective = "awesome!";
-let ourStr = "freeCodeCamp is ";
-ourStr += anAdjective;
+const anAdjective5 = "awesome!";
+let ourStr5 = "freeCodeCamp is ";
+ourStr5 += anAdjective5;
 
 const someAdjective = "boom-diggy";
-let myStr = "Learning to code is ";
+let myStr6 = "Learning to code is ";
 
-myStr += someAdjective;
+myStr6 += someAdjective;
 
 // getting to the useful bits - finding lengths >> 
 
@@ -188,8 +188,8 @@ myStr = "Job";
 
 // getting the last char >>> 
 
-const firstName = "Ada";
-const lastLetter = firstName[firstName.length - 1];         // a
+const firstName2 = "Ada";
+const lastLetter2 = firstName2[firstName2.length - 1];         // a
 
 // this does seem more complicated than in python ??? 
 
@@ -200,7 +200,7 @@ const myAdverb = "quickly";
 
 const wordBlanks = "the Apple " + myNoun + " is the latest " + myAdjective + " thing to hit the stores. Our intrepid reporter " + myVerb + " " + myAdverb + " to interview people eager to buy it.";
 
-
+console.log(wordBlanks)             // printing to terminal is harder than in python!
 /*
 Store Multiple Values in one Variable using JavaScript Arrays
 
@@ -209,6 +209,93 @@ With JavaScript array variables, we can store several pieces of data in one plac
 You start an array declaration with an opening square bracket, end it with a closing square bracket, and put a comma between each entry, like this:
 */
 const sandwich = ["peanut butter", "jelly", "bread"];       // looks like a list - is this different?
+
+/*
+Modify Array Data With Indexes
+
+Unlike strings, the entries of arrays are mutable and can be changed freely, even if the array was declared with const.
+*/
+
+const ourArray = [50, 40, 30];
+ourArray[0] = 15;
+
+const arr = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [[10, 11, 12], 13, 14]
+  ];
+  
+  arr[3];
+  arr[3][0];
+  arr[3][0][1];
+
+/* OUTPUT  
+arr[3] is [[10, 11, 12], 13, 14], 
+arr[3][0] is [10, 11, 12], 
+arr[3][0][1] is 11.
+*/
+
+// --- --- --- --- --- --- --- ---
+
+/*
+Manipulate Arrays With push()
+An easy way to append data to the end of an array is via the push() function.
+
+.push() takes one or more parameters and "pushes" them onto the end of the array.
+*/
+
+const arr1 = [1, 2, 3];
+arr1.push(4);
+
+const arr2 = ["Stimpson", "J", "cat"];
+arr2.push(["happy", "joy"]);
+
+/*
+Manipulate Arrays With pop()
+
+Another way to change the data in an array is with the .pop() function.
+
+.pop() is used to pop a value off of the end of an array. We can store this popped off value by assigning it to a variable. In other words, .pop() removes the last element from an array and returns that element.
+
+Any type of entry can be popped off of an array - numbers, strings, even nested arrays.
+*/
+
+const threeArr = [1, 4, 6];
+const oneDown = threeArr.pop();
+console.log(oneDown);
+console.log(threeArr);
+
+/*
+Manipulate Arrays With shift()
+
+pop() always removes the last element of an array. What if you want to remove the first?
+
+That's where .shift() comes in. It works just like .pop(), except it removes the first element instead of the last.
+*/
+
+const ourArray7 = ["Stimpson", "J", ["cat"]];
+const removedFromOurArray = ourArray7.shift();
+
+/*
+Manipulate Arrays With unshift()
+
+Not only can you shift elements off of the beginning of an array, you can also unshift elements to the beginning of an array i.e. add elements in front of the array.
+
+.unshift() works exactly like .push(), but instead of adding the element at the end of the array, unshift() adds the element at the beginning of the array.
+*/
+
+const ourArray8 = ["Stimpson", "J", "cat"];
+ourArray8.shift();
+ourArray8.unshift("Happy");
+
+
+
+
+
+
+
+
 
 
 
