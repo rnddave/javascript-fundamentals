@@ -153,8 +153,62 @@ const anAdjective = "awesome!";
 let ourStr = "freeCodeCamp is ";
 ourStr += anAdjective;
 
+const someAdjective = "boom-diggy";
+let myStr = "Learning to code is ";
+
+myStr += someAdjective;
+
+// getting to the useful bits - finding lengths >> 
+
+// You can find the length of a String value by writing .length after the string variable or string literal.
+
+console.log("Alan Peter".length);           // 10
+
+//-------------------------
+
+// Use Bracket Notation to Find the First Character in a String
+
+const firstName = "Charles";
+const firstLetter = firstName[0];       // C
+
+// In JavaScript, String values are immutable, which means that they cannot be altered once created.
+
+/*
+
+let myStr = "Bob";
+myStr[0] = "J";
+
+cannot change the value of myStr to Job, because the contents of myStr cannot be altered. Note that this does not mean that myStr cannot be changed, just that the individual characters of a string literal cannot be changed. 
+
+The only way to change myStr would be to assign it with a new string, like this:
+
+let myStr = "Bob";
+myStr = "Job";
+*/
+
+// getting the last char >>> 
+
+const firstName = "Ada";
+const lastLetter = firstName[firstName.length - 1];         // a
+
+// this does seem more complicated than in python ??? 
+
+const myNoun = "dog";
+const myAdjective = "big";
+const myVerb = "ran";
+const myAdverb = "quickly";
+
+const wordBlanks = "the Apple " + myNoun + " is the latest " + myAdjective + " thing to hit the stores. Our intrepid reporter " + myVerb + " " + myAdverb + " to interview people eager to buy it.";
 
 
+/*
+Store Multiple Values in one Variable using JavaScript Arrays
+
+With JavaScript array variables, we can store several pieces of data in one place.
+
+You start an array declaration with an opening square bracket, end it with a closing square bracket, and put a comma between each entry, like this:
+*/
+const sandwich = ["peanut butter", "jelly", "bread"];       // looks like a list - is this different?
 
 
 
