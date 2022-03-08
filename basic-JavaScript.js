@@ -367,7 +367,97 @@ If myVal is equal to 10, the equality operator returns true, so the code in the 
 1   ==  2  // false
 1   == '1' // true
 "3" ==  3  // true
+
+
+Strict equality (===) is the counterpart to the equality operator (==). However, unlike the equality operator, which attempts to convert both values being compared to a common type, the strict equality operator does not perform a type conversion.
+
+If the values being compared have different types, they are considered unequal, and the strict equality operator will return false.
+
+Examples
+
+3 ===  3  // true
+3 === '3' // false
+
 */
+
+// typeof (like type() in python ??)
+
+/*
+Note: In JavaScript, you can determine the type of a variable or a value with the typeof operator, as follows:
+
+typeof 3
+typeof '3'
+*/
+
+// The inequality operator (!=) is the opposite of the equality operator. 
+
+function testNotEqual(val) {
+    if (val != 99) { 
+      return "Not Equal";
+    }
+    return "Equal";
+  }
+  
+  testNotEqual(10);
+
+/*
+Comparison with the Strict Inequality Operator
+The strict inequality operator (!==) is the logical opposite of the strict equality operator. It means "Strictly Not Equal" and returns false where strict equality would return true and vice versa. The strict inequality operator will not convert data types.
+
+Examples
+
+3 !==  3  // false
+3 !== '3' // true
+4 !==  3  // true
+*/
+
+/*
+Sometimes you will need to test more than one thing at a time. The logical and operator (&&) returns true if and only if the operands to the left and right of it are true.
+
+The same effect could be achieved by nesting an if statement inside another if:
+*/
+if (num > 5) {
+  if (num < 10) {
+    return "Yes";
+  }
+}
+return "No";
+
+/*
+will only return Yes if num is greater than 5 and less than 10. The same logic can be written as:
+*/
+
+if (num > 5 && num < 10) {
+  return "Yes";
+}
+return "No";
+
+
+// The logical or operator (||) returns true if either of the operands is true. Otherwise, it returns false
+
+if (num > 10 || num < 5) {
+    return "No";
+  }
+  return "Yes";
+
+// else
+
+if (num > 10) {
+    return "Bigger than 10";
+  } else {
+    return "10 or Less";
+  }
+
+// Introducing Else If Statements
+// If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements.
+
+if (num > 15) {
+    return "Bigger than 15";
+  } else if (num < 5) {
+    return "Smaller than 5";
+  } else {
+    return "Between 5 and 15";
+  }
 
 
 
