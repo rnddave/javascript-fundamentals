@@ -240,6 +240,7 @@ arr[3][0][1] is 11.
 
 /*
 Manipulate Arrays With push()
+
 An easy way to append data to the end of an array is via the push() function.
 
 .push() takes one or more parameters and "pushes" them onto the end of the array.
@@ -315,6 +316,60 @@ function plusThree(num) {
   
 const answer9 = plusThree(5);
 console.log(answer9)
+
+/*
+In JavaScript, scope refers to the visibility of variables. Variables which are defined outside of a function block have Global scope. This means, they can be seen everywhere in your JavaScript code.
+
+Variables which are declared without the let or const keywords are automatically created in the global scope. This can create unintended consequences elsewhere in your code or when running a function again. You should always declare your variables with let or const
+*/
+
+const someVar = "Hat";
+
+function myFun() {
+  const someVar = "Head";
+  return someVar;
+}
+
+/*
+Global vs. Local Scope in Functions
+It is possible to have both local and global variables with the same name. When you do this, the local variable takes precedence over the global variable.
+*/
+
+// >>>>>>>>>>> IF STATEMENTS  <<<<<<<<<<<
+
+// The keyword if tells JavaScript to execute the code in the curly braces under certain conditions, defined in the parentheses. 
+
+function test (myCondition) {
+    if (myCondition) {
+      return "It was true";
+    }
+    return "It was false";
+  }
+  
+  test(true);
+  test(false);
+
+  /* 
+  The most basic operator is the equality operator ==. The equality operator compares two values and returns true if they're equivalent or false if they are not. Note that equality is different from assignment (=), which assigns the value on the right of the operator to a variable on the left.
+  */
+
+  function equalityTest(myVal) {
+    if (myVal == 10) {
+      return "Equal";
+    }
+    return "Not Equal";
+  }
+
+/*
+If myVal is equal to 10, the equality operator returns true, so the code in the curly braces will execute, and the function will return Equal. Otherwise, the function will return Not Equal. In order for JavaScript to compare two different data types (for example, numbers and strings), it must convert one type to another. This is known as Type Coercion. Once it does, however, it can compare terms as follows:
+
+1   ==  1  // true
+1   ==  2  // false
+1   == '1' // true
+"3" ==  3  // true
+*/
+
+
 
 
 
