@@ -20,37 +20,37 @@ par and strokes will always be numeric and positive. We have added an array of a
 const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
 
 function golfScore(par, strokes) {
-  // Only change code below this line
+    // Only change code below this line
 
-  if (strokes == 1) {
-    return "Hole-in-one!";
-  }
+    if (strokes == 1) {
+        return "Hole-in-one!";
+    }
 
-  else if (strokes <= par - 2) {
-    return "Eagle";
-  }
+    else if (strokes <= par - 2) {
+        return "Eagle";
+    }
 
-  else if (strokes == par - 1) {
-    return "Birdie";
-  }
+    else if (strokes == par - 1) {
+        return "Birdie";
+    }
 
-  else if (strokes == par) {
-    return "Par";
-  }
+    else if (strokes == par) {
+        return "Par";
+    }
 
-  else if (strokes == par + 1) {
-    return "Bogey";
-  }
-  
-  else if (strokes == par + 2) {
-    return "Double Bogey";
-  }
+    else if (strokes == par + 1) {
+        return "Bogey";
+    }
 
-  else if (strokes >= par + 3) {
-    return "Go Home!";
-  }
-  return "Change Me";
-  // Only change code above this line
+    else if (strokes == par + 2) {
+        return "Double Bogey";
+    }
+
+    else if (strokes >= par + 3) {
+        return "Go Home!";
+    }
+    return "Change Me";
+    // Only change code above this line
 }
 
 golfScore(5, 4);

@@ -49,10 +49,10 @@ variables declared using const are read-only. They are a constant value, which m
 
 It is common for developers to use uppercase variable identifiers for immutable values and lowercase or camelCase for mutable values (objects and arrays). */
 
-const FCC = "freeCodeCamp"; 
-let fact = "is cool!"; 
+const FCC = "freeCodeCamp";
+let fact = "is cool!";
 fact = "is awesome!";
-console.log(FCC, fact); 
+console.log(FCC, fact);
 
 /*
 >>> Increment a Number with JavaScript
@@ -224,11 +224,11 @@ const arr = [
     [4, 5, 6],
     [7, 8, 9],
     [[10, 11, 12], 13, 14]
-  ];
-  
-  arr[3];
-  arr[3][0];
-  arr[3][0][1];
+];
+
+arr[3];
+arr[3][0];
+arr[3][0][1];
 
 /* OUTPUT  
 arr[3] is [[10, 11, 12], 13, 14], 
@@ -294,9 +294,9 @@ ourArray8.unshift("Happy");
 
 function functionName() {
     console.log("Hello World");
-  }
+}
 
-  functionName();
+functionName();
 
 /*
 Parameters are variables that act as placeholders for the values that are to be input to a function when it is called. When a function is defined, it is typically defined along with one or more parameters. The actual values that are input (or "passed") into a function when it is called are known as arguments.
@@ -304,7 +304,7 @@ Parameters are variables that act as placeholders for the values that are to be 
 
 function testFun(param1, param2) {
     console.log(param1, param2);
-  }
+}
 
 testFun("this is one param", "this is another")
 
@@ -312,8 +312,8 @@ testFun("this is one param", "this is another")
 
 function plusThree(num) {
     return num + 3;
-  }
-  
+}
+
 const answer9 = plusThree(5);
 console.log(answer9)
 
@@ -326,8 +326,8 @@ Variables which are declared without the let or const keywords are automatically
 const someVar = "Hat";
 
 function myFun() {
-  const someVar = "Head";
-  return someVar;
+    const someVar = "Head";
+    return someVar;
 }
 
 /*
@@ -339,26 +339,26 @@ It is possible to have both local and global variables with the same name. When 
 
 // The keyword if tells JavaScript to execute the code in the curly braces under certain conditions, defined in the parentheses. 
 
-function test (myCondition) {
+function test(myCondition) {
     if (myCondition) {
-      return "It was true";
+        return "It was true";
     }
     return "It was false";
-  }
-  
-  test(true);
-  test(false);
+}
 
-  /* 
-  The most basic operator is the equality operator ==. The equality operator compares two values and returns true if they're equivalent or false if they are not. Note that equality is different from assignment (=), which assigns the value on the right of the operator to a variable on the left.
-  */
+test(true);
+test(false);
 
-  function equalityTest(myVal) {
+/* 
+The most basic operator is the equality operator ==. The equality operator compares two values and returns true if they're equivalent or false if they are not. Note that equality is different from assignment (=), which assigns the value on the right of the operator to a variable on the left.
+*/
+
+function equalityTest(myVal) {
     if (myVal == 10) {
-      return "Equal";
+        return "Equal";
     }
     return "Not Equal";
-  }
+}
 
 /*
 If myVal is equal to 10, the equality operator returns true, so the code in the curly braces will execute, and the function will return Equal. Otherwise, the function will return Not Equal. In order for JavaScript to compare two different data types (for example, numbers and strings), it must convert one type to another. This is known as Type Coercion. Once it does, however, it can compare terms as follows:
@@ -392,13 +392,13 @@ typeof '3'
 // The inequality operator (!=) is the opposite of the equality operator. 
 
 function testNotEqual(val) {
-    if (val != 99) { 
-      return "Not Equal";
+    if (val != 99) {
+        return "Not Equal";
     }
     return "Equal";
-  }
-  
-  testNotEqual(10);
+}
+
+testNotEqual(10);
 
 /*
 Comparison with the Strict Inequality Operator
@@ -417,9 +417,9 @@ Sometimes you will need to test more than one thing at a time. The logical and o
 The same effect could be achieved by nesting an if statement inside another if:
 */
 if (num > 5) {
-  if (num < 10) {
-    return "Yes";
-  }
+    if (num < 10) {
+        return "Yes";
+    }
 }
 return "No";
 
@@ -428,7 +428,7 @@ will only return Yes if num is greater than 5 and less than 10. The same logic c
 */
 
 if (num > 5 && num < 10) {
-  return "Yes";
+    return "Yes";
 }
 return "No";
 
@@ -437,44 +437,50 @@ return "No";
 
 if (num > 10 || num < 5) {
     return "No";
-  }
-  return "Yes";
+}
+return "Yes";
 
 // else
 
 if (num > 10) {
     return "Bigger than 10";
-  } else {
+} else {
     return "10 or Less";
-  }
+}
 
 // Introducing Else If Statements
 // If you have multiple conditions that need to be addressed, you can chain if statements together with else if statements.
 
 if (num > 15) {
     return "Bigger than 15";
-  } else if (num < 5) {
+} else if (num < 5) {
     return "Smaller than 5";
-  } else {
+} else {
     return "Between 5 and 15";
-  }
+}
 
 // -->> GOLF-CODE.js <<--
 
 // Selecting from Many Options with Switch Statements
 
-switch(lowercaseLetter) {
+switch (lowercaseLetter) {
     case "a":
-      console.log("A");
-      break;
+        console.log("A");
+        break;
     case "b":
-      console.log("B");
-      break;
-  }
+        console.log("B");
+        break;
+}
 
 /* 
 case values are tested with strict equality (===). The break tells JavaScript to stop executing statements. If the break is omitted, the next statement will be executed.
 
+This is how it works:
+
+The switch expression is evaluated once.
+The value of the expression is compared with the values of each case.
+If there is a match, the associated block of code is executed.
+If there is no match, the default code block is executed.
 
 Write a switch statement which tests val and sets answer for the following conditions:
 1 - alpha
@@ -486,81 +492,174 @@ Write a switch statement which tests val and sets answer for the following condi
 function caseInSwitch(val) {
     let answer = "";
     // Only change code below this line
-  
-    switch(val) {
-      case 1:
-        answer = "alpha";
-        break;
+
+    switch (val) {
+        case 1:
+            answer = "alpha";
+            break;
     }
-  
-    switch(val) {
-      case 2:
-        answer = "beta";
-        break;
+
+    switch (val) {
+        case 2:
+            answer = "beta";
+            break;
     }
-  
-    switch(val) {
-      case 3:
-        answer = "gamma";
-        break;
+
+    switch (val) {
+        case 3:
+            answer = "gamma";
+            break;
     }
-  
-    switch(val) {
-      case 4:
-        answer = "delta";
-        break;
-    }  
+
+    switch (val) {
+        case 4:
+            answer = "delta";
+            break;
+    }
     // Only change code above this line
     return answer;
-  }
-  
-  caseInSwitch(1);
+}
 
- // definitely don't get this case/switch shit
- 
- /*
- In a switch statement you may not be able to specify all possible values as case statements. Instead, you can add the default statement which will be executed if no matching case statements are found. Think of it like the final else statement in an if/else chain.
+caseInSwitch(1);
+
+// definitely don't get this case/switch shit
+
+/*
+In a switch statement you may not be able to specify all possible values as case statements. Instead, you can add the default statement which will be executed if no matching case statements are found. Think of it like the final else statement in an if/else chain.
 
 switch (num) {
-  case value1:
-    statement1;
-    break;
-  case value2:
-    statement2;
-    break;
+ case value1:
+   statement1;
+   break;
+ case value2:
+   statement2;
+   break;
 ...
-  default:
-    defaultStatement;
-    break;
+ default:
+   defaultStatement;
+   break;
 }
- */
+*/
 
 function switchOfStuff(val) {
     let answer = "";
     // Only change code below this line
-  
-      switch(val) {
+
+    switch (val) {
         case "a":
-          answer = "apple";
-          break;
+            answer = "apple";
+            break;
         case "b":
-          answer = "bird";
-          break;
+            answer = "bird";
+            break;
         case "c":
-          answer = "cat";
-          break;
+            answer = "cat";
+            break;
         default:
-          answer = "stuff";
-          break;
-      } 
-  
+            answer = "stuff";
+            break;
+    }
+
     // Only change code above this line
     return answer;
-  }
-  
-  switchOfStuff(1);
+}
 
-  
+switchOfStuff(1);
+
+/*
+Multiple Identical Options in Switch Statements
+
+If the break statement is omitted from a switch statement's case, the following case statement(s) are executed until a break is encountered. If you have multiple inputs with the same output, you can represent them in a switch statement like this:
+
+let result = "";
+switch(val) {
+ case 1:
+ case 2:
+ case 3:
+   result = "1, 2, or 3";
+   break;
+ case 4:
+   result = "4 alone";
+}
+Cases for 1, 2, and 3 will all produce the same result.
+
+
+Write a switch statement to set answer for the following ranges:
+1-3 - Low
+4-6 - Mid
+7-9 - High
+*/
+
+function sequentialSizes(val) {
+    let answer = "";
+    // Only change code below this line
+    switch (val) {
+        case 1:
+        case 2:
+        case 3:
+            answer = "Low";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            answer = "Mid";
+            break;
+        case 7:
+        case 8:
+        case 9:
+            answer = "High";
+            break;
+    }
+
+
+    // Only change code above this line
+    return answer;
+}
+
+sequentialSizes(1);
+
+/*
+If you have many options to choose from, a switch statement can be easier to write than many chained if/else if statements. The following:
+
+if (val === 1) {
+  answer = "a";
+} else if (val === 2) {
+  answer = "b";
+} else {
+  answer = "c";
+}
+can be replaced with:
+
+switch(val) {
+  case 1:
+    answer = "a";
+    break;
+  case 2:
+    answer = "b";
+    break;
+  default:
+    answer = "c";
+}
+*/
+
+/*
+Sometimes people use an if/else statement to do a comparison, like this:
+
+function isEqual(a, b) {
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
+}
+But there's a better way to do this. Since === returns true or false, we can return the result of the comparison:
+
+function isEqual(a, b) {
+  return a === b;
+}
+*/
+
+// >>> CARD-COUNTING.JS <<<
 
 
 
