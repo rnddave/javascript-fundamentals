@@ -150,11 +150,63 @@ console.log(ourStorage.cabinet["top drawer"].folder2)
 
 // after record-collection.js == 84% complete
 
+const ourArray84 = [];
+let i = 0;
+
+while (i < 5) {
+  ourArray84.push(i);
+  i++;
+  console.log(ourArray84);
+}
+
+/* OUTPUT
+
+[ 0 ]
+[ 0, 1 ]
+[ 0, 1, 2 ]
+[ 0, 1, 2, 3 ]
+[ 0, 1, 2, 3, 4 ] */
+
+/*
+For loops are declared with three optional expressions separated by semicolons:
+
+for (a; b; c), where a is the initialization statement, b is the condition statement, and c is the final expression.
+
+The initialization statement is executed one time only before the loop starts. It is typically used to define and setup your loop variable.
+
+The condition statement is evaluated at the beginning of every loop iteration and will continue as long as it evaluates to true. When the condition is false at the start of the iteration, the loop will stop executing. This means if the condition starts as false, your loop will never execute.
+
+The final expression is executed at the end of each loop iteration, prior to the next condition check and is usually used to increment or decrement your loop counter.
+
+In the following example we initialize with i = 0 and iterate while our condition i < 5 is true. We'll increment i by 1 in each loop iteration with i++ as our final expression.
+*/
+
+const ourArray85 = [];
+
+for (let i = 0; i < 5; i++) {   // looks a bit like a lambda statement from python ?? 
+  ourArray85.push(i);
+}
+console.log(ourArray85);
+// ourArray85 will now have the value [0, 1, 2, 3, 4].
 
 
+const myArray86 = [];
 
+for (let j = 1; j < 6; j++) {
+  myArray86.push(j);
+}
 
+const ourArray86 = [];
 
+for (let i = 0; i < 10; i += 2) {       // count by 2 instead
+  ourArray86.push(i);
+}
+
+const ourArray87 = [];
+
+for (let i = 10; i > 0; i -= 2) {       // count backwards by 2
+  ourArray87.push(i);
+}
 
 
 
