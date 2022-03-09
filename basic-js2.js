@@ -208,7 +208,24 @@ for (let i = 10; i > 0; i -= 2) {       // count backwards by 2
   ourArray87.push(i);
 }
 
+const arr88 = [10, 9, 8, 7, 6];
 
+for (let i = 0; i < arr88.length; i++) {
+   console.log(arr88[i]);
+}
+
+// Declare and initialize a variable total to 0. Use a for loop to add the value of each element of the myArr array to total.
+
+const myArr88 = [2, 3, 4, 5, 6];
+
+let total88 = 0;
+
+for (let i = 0; i < myArr88.length; i++) {
+  //console.log(myArr88[i])
+  total88 += myArr88[i]
+}
+
+console.log(total88)
 
 
 
