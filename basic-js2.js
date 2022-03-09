@@ -102,6 +102,61 @@ function phoneticLookup(val) {
   phoneticLookup("charlie");
   console.log(phoneticLookup("charlie"))
   
+/*
+Sometimes it is useful to check if the property of a given object exists or not. We can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name. .hasOwnProperty() returns true or false if the property is found or not.
+*/
+
+/*
+Manipulating Complex Objects
+
+Sometimes you may want to store data in a flexible Data Structure. A JavaScript object is one way to handle flexible data. They allow for arbitrary combinations of strings, numbers, booleans, arrays, functions, and objects.
+*/
+
+const ourMusic = [
+    {
+      "artist": "Daft Punk",
+      "title": "Homework",
+      "release_year": 1997,
+      "formats": [ 
+        "CD", 
+        "Cassette", 
+        "LP"
+      ],
+      "gold": true
+    }
+  ];
+
+console.log(ourMusic);
+
+//  JavaScript Object Notation or JSON is a related data interchange format used to store data.
+
+//The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
+const ourStorage = {
+    "desk": {
+      "drawer": "stapler"
+    },
+    "cabinet": {
+      "top drawer": { 
+        "folder1": "a file",
+        "folder2": "secrets"
+      },
+      "bottom drawer": "soda"
+    }
+  };
+
+console.log(ourStorage.cabinet["top drawer"].folder2)
+
+// basic-ja = 83% complete >>> new file = record-collection.js
+
+
+
+
+
+
+
+
+
+
   
   
   
