@@ -40,3 +40,4 @@ const recordCollection = {
   }
   
   updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+  
