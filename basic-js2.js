@@ -41,10 +41,41 @@ const myObj75 = {
   console.log(myBreed);
  // console.log("are you working?"); // yes it is now working...
   
+ const someObj = {
+    propName: "John"
+  };
   
+  function propPrefix(str) {
+    const s = "prop";
+    return s + str;
+  }
   
+  // Another way you can use this concept is when the property's name is collected dynamically during the program execution, as follows:
+
+
+  const someProp = propPrefix("Name");
+  console.log(someObj[someProp]);
   
+// ^^^ 100% do not get this, what is the point of this, this seems very inefficient, perhaps just a bad coding example? 
+
+//   You can add new properties to existing JavaScript objects the same way you would modify them.
   
+// we can test this using the dogs object from earlier: 
+
+console.log(dogs);      
+// { Fido: 'Mutt', Hunter: 'Doberman', Snoopie: 'Beagle' }
+
+dogs.Scooby = "Great Dane";
+console.log(dogs);
+/*
+{
+  Fido: 'Mutt',
+  Hunter: 'Doberman',
+  Snoopie: 'Beagle',
+  Scooby: 'Great Dane'
+}
+*/
+
   
   
   
