@@ -227,7 +227,33 @@ for (let i = 0; i < myArr88.length; i++) {
 
 console.log(total88)
 
+const arr89 = [
+  [1, 2], [3, 4], [5, 6]
+];
 
+for (let i = 0; i < arr89.length; i++) {
+  for (let j = 0; j < arr89[i].length; j++) {
+    console.log(arr89[i][j]);
+  }
+}
+
+
+// Modify function multiplyAll so that it returns the product of all the numbers in the sub-arrays of arr.
+
+function multiplyAll(arr) {
+  let product = 1;
+
+  for (let i88 = 0; i88 < arr.length; i88++) {
+    for (let j88 = 0; j88 < arr[i88].length; j88++) {
+      product *= arr[i88][j88];
+      console.log(product)
+    }
+  }
+
+  return product;
+}
+
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
 
 
 
