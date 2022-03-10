@@ -270,6 +270,23 @@ do {
   console.log(i89);
 } while (i89 < 5);
 
+// Essentially, a do...while loop ensures that the code inside the loop will run at least once.
+
+// RECURSIVE = recursive.js === this is complicated!! 
+
+// Write a recursive function, sum(arr, n), that returns the sum of the first n elements of an array arr.
+
+function sum91(arr, n) {
+
+  if (n <= 0) {
+    return 0;
+  }
+  else {
+    return sum91(arr, n - 1) + arr[n - 1];
+  }
+}
+
+// aprox 91-92% == PROFILE-LOOKUP.JS
 
 
 
