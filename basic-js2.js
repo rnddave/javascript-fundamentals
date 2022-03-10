@@ -255,6 +255,20 @@ function multiplyAll(arr) {
 
 multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
 
+/*
+The next type of loop you will learn is called a do...while loop. It is called a do...while loop because it will first do one pass of the code inside the loop no matter what, and then continue to run the loop while the specified condition evaluates to true.
+*/
+
+const ourArray89 = [];
+let i89 = 0;
+
+console.log(i89);
+
+do {
+  ourArray89.push(i89);
+  i89++;
+  console.log(i89);
+} while (i89 < 5);
 
 
 
