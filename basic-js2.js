@@ -290,5 +290,57 @@ function sum91(arr, n) {
 
 // profile-lookup.js is complete and working >>> (basic-js = 92% complete)
 
+/* 
+JavaScript has a Math.random() function that generates a random decimal number between 0 (inclusive) and 1 (exclusive). Thus Math.random() can return a 0 but never return a 1.
+
+It's great that we can generate random decimal numbers, but it's even more useful if we use it to generate random whole numbers.
+
+Use Math.random() to generate a random decimal.
+Multiply that random decimal by 20.
+Use another function, Math.floor() to round the number down to its nearest whole number.
+Remember that Math.random() can never quite return a 1 and, because we're rounding down, it's impossible to actually get 20. This technique will give us a whole number between 0 and 19.
+
+Putting everything together, this is what our code looks like:
+
+Math.floor(Math.random() * 20);
+
+We are calling Math.random(), multiplying the result by 20, then passing the value to Math.floor() function to round the value down to the nearest whole number.
+*/
+
+// Create a function called randomRange that takes a range myMin and myMax and returns a random whole number that's greater than or equal to myMin, and is less than or equal to myMax, inclusive.
+
+function randomRange94(myMin94, myMax94) {
+  // Only change code below this line
+  return Math.floor(Math.random() * (myMax94 - myMin94 +1)) + myMin94;
+  // Only change code above this line
+}
 
 
+/*
+The parseInt() function parses a string and returns an integer. It takes a second argument for the radix, which specifies the base of the number in the string. The radix can be an integer between 2 and 36.
+
+The function call looks like:
+
+parseInt(string, radix);
+And here's an example:
+
+const a = parseInt("11", 2);
+The radix variable says that 11 is in the binary system, or base 2. This example converts the string 11 to an integer 3.
+*/
+
+// The following function uses an if/else statement to check a condition:
+
+function findGreater95(a, b) {
+  if(a > b) {
+    return "a is greater";
+  }
+  else {
+    return "b is greater or equal";
+  }
+}
+
+// This can be re-written using the conditional operator:
+
+function findGreater96(a, b) {
+  return a > b ? "a is greater" : "b is greater or equal";
+}
