@@ -288,5 +288,7 @@ function sum91(arr, n) {
 
 // aprox 91-92% == PROFILE-LOOKUP.JS
 
+// profile-lookup.js is complete and working >>> (basic-js = 92% complete)
+
 
 
