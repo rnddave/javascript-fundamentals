@@ -1,8 +1,8 @@
 // OBJECTS >>> Here is a sample of using dot notation (.) to read an object's property:
 
 const myObj75 = {
-    prop1: "val1",
-    prop2: "val2"
+  prop1: "val1",
+  prop2: "val2"
 };
 
 const prop1val = myObj75.prop1;
@@ -16,9 +16,9 @@ However, you can still use bracket notation on object properties without spaces.
 Here is a sample of using bracket notation to read an object's property: */
 
 const myObj76 = {
-    "Space Name": "Kirk",
-    "More Space": "Spock",
-    "NoSpace": "USS Enterprise"
+  "Space Name": "Kirk",
+  "More Space": "Spock",
+  "NoSpace": "USS Enterprise"
 };
 
 myObj76["Space Name"];
@@ -31,9 +31,9 @@ Another use of bracket notation on objects is to access a property which is stor
 Here is an example of using a variable to access a property:*/
 
 const dogs = {
-    Fido: "Mutt",
-    Hunter: "Doberman",
-    Snoopie: "Beagle"
+  Fido: "Mutt",
+  Hunter: "Doberman",
+  Snoopie: "Beagle"
 };
 
 const myDog = "Hunter";
@@ -42,12 +42,12 @@ console.log(myBreed);
 // console.log("are you working?"); // yes it is now working...
 
 const someObj = {
-    propName: "John"
+  propName: "John"
 };
 
 function propPrefix(str) {
-    const s = "prop";
-    return s + str;
+  const s = "prop";
+  return s + str;
 }
 
 // Another way you can use this concept is when the property's name is collected dynamically during the program execution, as follows:
@@ -83,20 +83,20 @@ delete ourDog.bark;
 */
 
 function phoneticLookup(val) {
-    let result = "";
+  let result = "";
 
-    const lookup = {
-        alpha: "Adams",
-        bravo: "Boston",
-        charlie: "Chicago",
-        delta: "Denver",
-        echo: "Easy",
-        foxtrot: "Frank"
-    }
+  const lookup = {
+    alpha: "Adams",
+    bravo: "Boston",
+    charlie: "Chicago",
+    delta: "Denver",
+    echo: "Easy",
+    foxtrot: "Frank"
+  }
 
-    result = lookup[val];
+  result = lookup[val];
 
-    return result;
+  return result;
 }
 
 phoneticLookup("charlie");
@@ -113,17 +113,17 @@ Sometimes you may want to store data in a flexible Data Structure. A JavaScript 
 */
 
 const ourMusic = [
-    {
-        "artist": "Daft Punk",
-        "title": "Homework",
-        "release_year": 1997,
-        "formats": [
-            "CD",
-            "Cassette",
-            "LP"
-        ],
-        "gold": true
-    }
+  {
+    "artist": "Daft Punk",
+    "title": "Homework",
+    "release_year": 1997,
+    "formats": [
+      "CD",
+      "Cassette",
+      "LP"
+    ],
+    "gold": true
+  }
 ];
 
 console.log(ourMusic);
@@ -132,16 +132,16 @@ console.log(ourMusic);
 
 //The sub-properties of objects can be accessed by chaining together the dot or bracket notation.
 const ourStorage = {
-    "desk": {
-        "drawer": "stapler"
+  "desk": {
+    "drawer": "stapler"
+  },
+  "cabinet": {
+    "top drawer": {
+      "folder1": "a file",
+      "folder2": "secrets"
     },
-    "cabinet": {
-        "top drawer": {
-            "folder1": "a file",
-            "folder2": "secrets"
-        },
-        "bottom drawer": "soda"
-    }
+    "bottom drawer": "soda"
+  }
 };
 
 console.log(ourStorage.cabinet["top drawer"].folder2)
@@ -211,7 +211,7 @@ for (let i = 10; i > 0; i -= 2) {       // count backwards by 2
 const arr88 = [10, 9, 8, 7, 6];
 
 for (let i = 0; i < arr88.length; i++) {
-   console.log(arr88[i]);
+  console.log(arr88[i]);
 }
 
 // Declare and initialize a variable total to 0. Use a for loop to add the value of each element of the myArr array to total.
@@ -311,7 +311,7 @@ We are calling Math.random(), multiplying the result by 20, then passing the val
 
 function randomRange94(myMin94, myMax94) {
   // Only change code below this line
-  return Math.floor(Math.random() * (myMax94 - myMin94 +1)) + myMin94;
+  return Math.floor(Math.random() * (myMax94 - myMin94 + 1)) + myMin94;
   // Only change code above this line
 }
 
@@ -331,7 +331,7 @@ The radix variable says that 11 is in the binary system, or base 2. This example
 // The following function uses an if/else statement to check a condition:
 
 function findGreater95(a, b) {
-  if(a > b) {
+  if (a > b) {
     return "a is greater";
   }
   else {
@@ -360,9 +360,9 @@ checkEqual97(1, 2);
 // multiple conditional operators
 
 function findGreaterOrEqual97(a, b) {
-  return (a === b) ? "a and b are equal" 
-    : (a > b) ? "a is greater" 
-    : "b is greater";
+  return (a === b) ? "a and b are equal"
+    : (a > b) ? "a is greater"
+      : "b is greater";
 }
 
 // It is considered best practice to format multiple conditional operators such that each condition is on a separate line, as shown above. Using multiple conditional operators without proper indentation may make your code hard to read.
@@ -374,8 +374,8 @@ function findGreaterOrEqual97(a, b) {
 function checkSign98(num) {
 
   return (num > 0) ? "positive"
-  : (num < 0) ? "negative"
-  : "zero";
+    : (num < 0) ? "negative"
+      : "zero";
 
 
 }
@@ -388,10 +388,10 @@ checkSign98(10);
 We have defined a function called countdown with one parameter (n). The function should use recursion to return an array containing the integers n through 1 based on the n parameter. If the function is called with a number less than 1, the function should return an empty array. For example, calling this function with n = 5 should return the array [5, 4, 3, 2, 1]. Your function must use recursion by calling itself and must not use loops of any kind.
 */
 
-function countdown(n){
+function countdown(n) {
   if (n < 1) {
     return [];
-  } 
+  }
   else {
 
     const countArray = countdown(n - 1);
@@ -405,6 +405,25 @@ function countdown(n){
 console.log(countdown(9));
 
 // 99% complete (basic-js material)
+
+/*
+Continuing from the previous challenge, we provide you another opportunity to create a recursive function to solve a problem.
+
+We have defined a function named rangeOfNumbers with two parameters. The function should return an array of integers which begins with a number represented by the startNum parameter and ends with a number represented by the endNum parameter. The starting number will always be less than or equal to the ending number. Your function must use recursion by calling itself and not use loops of any kind. It should also work for cases where both startNum and endNum are the same.
+*/
+
+function rangeOfNumbers(startNum, endNum) {
+  if (endNum - startNum == 0) {
+    return [startNum];
+  }
+  else {
+    var working = rangeOfNumbers(startNum, endNum - 1);
+    working.push(endNum);
+    return working;
+  }
+}
+
+// basic-js content 100% complete - though I am not quite on top of it! 
 
 
 
