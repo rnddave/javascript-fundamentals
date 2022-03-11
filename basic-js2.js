@@ -357,3 +357,34 @@ function checkEqual97(a, b) {
 
 checkEqual97(1, 2);
 
+// multiple conditional operators
+
+function findGreaterOrEqual97(a, b) {
+  return (a === b) ? "a and b are equal" 
+    : (a > b) ? "a is greater" 
+    : "b is greater";
+}
+
+// It is considered best practice to format multiple conditional operators such that each condition is on a separate line, as shown above. Using multiple conditional operators without proper indentation may make your code hard to read.
+
+
+/* In the checkSign function, use multiple conditional operators - following the recommended format used in findGreaterOrEqual - to check if a number is positive, negative or zero. The function should return positive, negative or zero.
+*/
+
+function checkSign98(num) {
+
+  return (num > 0) ? "positive"
+  : (num < 0) ? "negative"
+  : "zero";
+
+
+}
+
+checkSign98(10);
+
+// 98% = recursion-countdown.js
+
+
+
+
+
