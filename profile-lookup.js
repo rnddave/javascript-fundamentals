@@ -46,25 +46,54 @@ const contacts = [
 function lookUpProfile(name, prop) {
     // Only change code below this line
 
-    // if the [name] is a firstname then {if-a}
-    // if the [prop] exists for that [name] (nested if statements I'm thinking) {if-b}
-    // if both {if-a && if-b} true then [return] the [value] of that property
-    if (name == contacts.firstName && prop == contacts.likes) {
-        return contacts.likes[prop];
+    // NOW THIS IS WORKING ... 
+    
+    for (let i = 0; i < contacts.length; i++) {
+        if (contacts[i].firstName == name) {
+            if (contacts[i].hasOwnProperty(prop)) {
+                return contacts[i][prop];
+            }
+            else {
+                return "No such property";
+            }
+        }
     }
-    else if (name != contacts.firstName) {
-        return "No such contact"
-    }
-    else if (name == contacts.firstName && prop != contacts.likes) {
-        return "No such property"
-    }
+    return "No such contact";
 
+    /* SECOND ATTEMPT = CRAP
 
-    // if [name] does not correspond to any contacts then return the string [No such contact]
+    for (let i = 0; i < contacts.length; i++) {
+        if (contacts[i].firstName == name) {
+            if (contacts[i].hasOwnProperty(prop)) {
+                return contacts[i].prop;
+            }
+            else {
+                return "No such property"
+            }
+        }
+        else {
+            return "No such contact"
+        }
+        }
+    } 
+    /*
 
-    // if [prop] no correspond to any valid properties, then return [No such property]
+    /*
 
+    FIRST ATTEMP = crap ...
 
+        if (name == contacts.firstName && prop == contacts.hasOwnProperty(prop)) {         // doesn't work
+            return contacts.prop;
+        }
+        else if (name != contacts.firstName) {                              // does work
+            return "No such contact"
+        }
+        else if (name == contacts.firstName && prop != contacts.likes) {    // doesn't work
+            return "No such property"
+        }
+    
+    
+    */
     // Only change code above this line
 }
 
