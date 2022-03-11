@@ -344,3 +344,16 @@ function findGreater95(a, b) {
 function findGreater96(a, b) {
   return a > b ? "a is greater" : "b is greater or equal";
 }
+
+/*
+Use the conditional operator in the checkEqual function to check if two numbers are equal or not. The function should return either the string Equal or the string Not Equal.
+*/
+
+function checkEqual97(a, b) {
+
+  return a != b ? "Not Equal" : "Equal";
+
+}
+
+checkEqual97(1, 2);
+
