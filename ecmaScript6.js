@@ -18,10 +18,51 @@ For example:
 */
 
 var numArray01 = [];
-for (var i = 0; i < 3; i++) {
-  numArray01.push(i);
+for (var i01 = 0; i01 < 3; i01++) {
+  numArray01.push(i01);
 }
 console.log(numArray01);
-console.log(i);
+console.log(i01);
 
 // Here the console will display the values [0, 1, 2] and 3.
+
+//With the var keyword, i is declared globally. So when i++ is executed, it updates the global variable. This code is similar to the following:
+
+var numArray01b = [];
+var i01b;
+for (i01b = 0; i01b < 3; i01b++) {
+  numArray01b.push(i01b);
+}
+console.log(numArray01b);
+console.log(i01b);
+
+// Here the console will display the values [0, 1, 2] and 3.
+
+var printNumTwo;
+for (var i = 0; i < 3; i++) {
+  if (i === 2) {
+    printNumTwo = function() {
+      return i;
+    };
+  }
+}
+console.log(printNumTwo());
+
+/*
+Here the console will display the value 3.
+
+As you can see, printNumTwo() prints 3 and not 2. This is because the value assigned to i was updated and the printNumTwo() returns the global i and not the value i had when the function was created in the for loop. */
+
+let printNumTwo01b;
+for (let i = 0; i < 3; i++) {
+  if (i === 2) {
+    printNumTwo01b = function() {
+      return i;
+    };
+  }
+}
+console.log(printNumTwo01b());
+console.log(i);
+
+// the console will display the value 2, and an error that i is not defined.
+
