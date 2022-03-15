@@ -115,4 +115,10 @@ const myFunc = () => "value";
 This code will still return the string value by default.
 */
 
+// Just like a regular function, you can pass arguments into an arrow function.
+
+const doubler = (item) => item * 2;
+doubler(4);
+console.log(doubler(4));                // 8
+console.log(doubler(1234));             // 2468
 
