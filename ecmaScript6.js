@@ -66,3 +66,53 @@ console.log(i);
 
 // the console will display the value 2, and an error that i is not defined.
 
+// CONST
+
+// objects (including arrays and functions) assigned to a variable using const are still mutable. Using the const declaration only prevents reassignment of the variable identifier.
+
+const s01 = [5, 2, 7];
+console.log(s01);
+s01.sort()
+console.log(s01);
+/*
+[ 5, 2, 7 ]
+[ 2, 5, 7 ]
+*/
+
+// const declaration alone doesn't really protect your data from mutation. To ensure your data doesn't change, JavaScript provides a function Object.freeze to prevent data mutation
+
+let obj = {
+    name:"FreeCodeCamp",
+    review:"Awesome"
+  };
+  Object.freeze(obj);
+  obj.review = "bad";           // basically these lines are just ignored
+  obj.newProp = "Test";
+  console.log(obj); 
+
+// { name: 'FreeCodeCamp', review: 'Awesome' }
+
+/*
+>>> Use Arrow Functions to Write Concise Anonymous Functions
+
+In JavaScript, we often don't need to name our functions, especially when passing a function as an argument to another function. Instead, we create inline functions. We don't need to name these functions because we do not reuse them anywhere else.
+
+To achieve this, we often use the following syntax:
+
+const myFunc = function() {
+  const myVar = "value";
+  return myVar;
+}
+ES6 provides us with the syntactic sugar to not have to write anonymous functions this way. Instead, you can use arrow function syntax:
+
+const myFunc = () => {
+  const myVar = "value";
+  return myVar;
+}
+When there is no function body, and only a return value, arrow function syntax allows you to omit the keyword return as well as the brackets surrounding the code. This helps simplify smaller functions into one-line statements:
+
+const myFunc = () => "value";
+This code will still return the string value by default.
+*/
+
+
