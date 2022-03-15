@@ -122,3 +122,80 @@ doubler(4);
 console.log(doubler(4));                // 8
 console.log(doubler(1234));             // 2468
 
+// It is possible to pass more than one argument into an arrow function.
+
+const multiplier = (item, multi) => item * multi;
+console.log(multiplier(4, 2));          // 8
+
+/*
+Set Default Parameters for Your Functions
+
+In order to help us create more flexible functions, ES6 introduces default parameters for functions.
+*/
+
+const greeting = (name = "Anonymous") => "Hello " + name;
+
+console.log(greeting("John"));
+console.log(greeting());
+
+// The console will display the strings Hello John and Hello Anonymous.
+
+/*
+Use the Rest Parameter with Function Parameters
+
+In order to help us create more flexible functions, ES6 introduces the rest parameter for function parameters. With the rest parameter, you can create functions that take a variable number of arguments. These arguments are stored in an array that can be accessed later from inside the function.
+*/
+
+function howMany(...args) {
+    return "You have passed " + args.length + " arguments.";
+  }
+  console.log(howMany(0, 1, 2));
+  console.log(howMany("string", null, [1, 2, 3], { }));
+
+//  The console would display the strings You have passed 3 arguments. and You have passed 4 arguments..
+
+//The rest parameter eliminates the need to check the args array and allows us to apply map(), filter() and reduce() on the parameters array.
+
+// kind of like the *args in python ?? 
+
+// ES6 introduces the spread operator, which allows us to expand arrays and other expressions in places where multiple parameters or elements are expected.
+
+const arr = [6, 89, 3, 45];
+const maximus = Math.max(...arr);
+console.log(maximus);
+// maximus would have a value of 89.
+// ...arr returns an unpacked array. In other words, it spreads the array. 
+
+/*
+Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables highToday and highTomorrow the values of today and tomorrow from the HIGH_TEMPERATURES object.
+
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+  
+const highToday = HIGH_TEMPERATURES.today;
+const highTomorrow = HIGH_TEMPERATURES.tomorrow; 
+
+*/
+
+const HIGH_TEMPERATURES = {
+    yesterday: 75,
+    today: 77,
+    tomorrow: 80
+  };
+
+const {today: highToday} = HIGH_TEMPERATURES;
+const {tomorrow: highTomorrow} = HIGH_TEMPERATURES;
+
+
+
+
+
+
+
+
+
+
