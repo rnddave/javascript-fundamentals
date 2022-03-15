@@ -6,6 +6,7 @@ Most of the JavaScript you've learned up to this point [basic-js] was in ES5 (EC
 ES6, released in 2015, added many powerful new features to the language. In this course, you'll learn these new features, including arrow functions, destructuring, classes, promises, and modules.
 */
 
+
 /*
 If you are unfamiliar with let, check out this challenge.
 
