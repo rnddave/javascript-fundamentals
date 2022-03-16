@@ -42,4 +42,38 @@ the output for this is unexpected >>>
 ]
 */
 
+/*
+So far, you have only been able to extract or search a pattern once.
 
+let testStr = "Repeat, Repeat, Repeat";
+let ourRegex = /Repeat/;
+testStr.match(ourRegex);
+Here match would return ["Repeat"].
+
+To search or extract a pattern more than once, you can use the g flag.
+
+let repeatRegex = /Repeat/g;
+testStr.match(repeatRegex);
+And here match returns the value ["Repeat", "Repeat", "Repeat"]
+
+*/
+
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /twinkle/ig; 
+let result5 = twinkleStar.match(starRegex); 
+console.log(result5);                           // [ 'Twinkle', 'twinkle' ]
+
+
+// the [ dot \\ . \\ period ] = wild card >>
+
+let humStr = "I'll hum a song";
+let hugStr = "Bear hug";
+let huRegex = /hu./;
+console.log(huRegex.test(humStr));
+console.log(huRegex.test(hugStr));
+
+
+let exampleStr = "Let's have fun with regular expressions!";
+let unRegex = /.un/; // Change this line
+let result6 = unRegex.test(exampleStr);
+console.log(result6)
