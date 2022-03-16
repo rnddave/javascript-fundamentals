@@ -543,6 +543,36 @@ const makeServerRequest3 = new Promise((resolve, reject) => {
     }
   });
 
+// catch is the method used when your promise has been rejected. It is executed immediately after a promise's reject method is called. 
 
+const makeServerRequest4 = new Promise((resolve, reject) => {
+    // responseFromServer is set to false to represent an unsuccessful response from a server
+    let responseFromServer = false;
+      
+    if(responseFromServer) {
+      resolve("We got the data");
+    } else {  
+      reject("Data not received");
+      makeServerRequest4.catch(error => {
+        console.log(error);
+      })
+    }
+  });
+  
+  makeServerRequest4.then(result => {
+    console.log(result);
+  });
+
+  // this fails but we are at 100% of this section in fcc lesson plan anyway 
+
+  /*
+  node:internal/process/promises:246
+          triggerUncaughtException(err, true // fromPromise //);
+          ^
+
+[UnhandledPromiseRejection: This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). The promise rejected with the reason "Data not received".] {
+  code: 'ERR_UNHANDLED_REJECTION'
+}
+*/
 
 
