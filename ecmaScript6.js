@@ -420,5 +420,5 @@ export const uppercaseString = (string) => {
     return string.toLowerCase()
   }
 
-// NB i commented out export as failed in test script. 
+// NB I commented out export as failed in test script. 
 
