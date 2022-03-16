@@ -24,5 +24,22 @@ let fccRegex = /freecodecamp/i;         // i = case insensitive
 let result3 = fccRegex.test(myString);
 console.log(result3);                   // true
 
+// using Match to extract the matched item... 
+
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/; 
+let result4 = extractStr.match(codingRegex); 
+console.log(result4);
+
+/*
+the output for this is unexpected >>> 
+
+[
+  'coding',
+  index: 18,
+  input: "Extract the word 'coding' from this string.",
+  groups: undefined
+]
+*/
 
 
