@@ -77,3 +77,61 @@ let exampleStr = "Let's have fun with regular expressions!";
 let unRegex = /.un/; // Change this line
 let result6 = unRegex.test(exampleStr);
 console.log(result6)
+
+
+/*
+You can search for a literal pattern with some flexibility with character classes. Character classes allow you to define a group of characters you wish to match by placing them inside square ([ and ]) brackets.
+
+For example, you want to match bag, big, and bug but not bog. You can create the regex /b[aiu]g/ to do this. The [aiu] is the character class that will only match the characters a, i, or u.
+*/
+
+let bigStr = "big";
+let bagStr = "bag";
+let bugStr = "bug";
+let bogStr = "bog";
+let bgRegex = /b[aiu]g/;
+bigStr.match(bgRegex);
+bagStr.match(bgRegex);
+bugStr.match(bgRegex);
+bogStr.match(bgRegex);
+
+// find the vowels 
+
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[a|e|i|o|u]/ig; // Change this line
+let result7 = quoteSample.match(vowelRegex); // Change this line
+console.log(result7);
+
+// finding a range (whole alphabet...)
+
+let quoteSample8 = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/ig; // Change this line
+let result8 = quoteSample8.match(alphabetRegex); // Change this line
+console.log(result8);
+/*
+[
+  'T', 'h', 'e', 'q', 'u', 'i', 'c',
+  'k', 'b', 'r', 'o', 'w', 'n', 'f',
+  'o', 'x', 'j', 'u', 'm', 'p', 's',
+  'o', 'v', 'e', 'r', 't', 'h', 'e',
+  'l', 'a', 'z', 'y', 'd', 'o', 'g'
+]
+*/
+console.log(typeof result8);        // object
+
+result8.sort();
+console.log(result8);
+/*[
+  'T', 'a', 'b', 'c', 'd', 'e', 'e',
+  'e', 'f', 'g', 'h', 'h', 'i', 'j',
+  'k', 'l', 'm', 'n', 'o', 'o', 'o',
+  'o', 'p', 'q', 'r', 'r', 's', 't',
+  'u', 'u', 'v', 'w', 'x', 'y', 'z'
+]*/
+
+
+
+
+
+
+
