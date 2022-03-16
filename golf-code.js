@@ -17,6 +17,7 @@ par and strokes will always be numeric and positive. We have added an array of a
 */
 
 
+
 const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
 
 function golfScore(par, strokes) {
