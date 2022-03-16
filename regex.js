@@ -129,8 +129,39 @@ console.log(result8);
   'u', 'u', 'v', 'w', 'x', 'y', 'z'
 ]*/
 
+// Also, it is possible to combine a range of letters and numbers in a single character set.
 
+let jennyStr = "Jenny8675309";
+let myRegex9 = /[a-z0-9]/ig;
+console.log(jennyStr.match(myRegex9));
 
+/*
+[
+  'J', 'e', 'n', 'n',
+  'y', '8', '6', '7',
+  '5', '3', '0', '9'
+]
+*/
+
+let quoteSample10 = "Blueberry 3.141592653s are delicious.";
+let myRegex10 = /[h-s2-6]/ig; // Change this line
+let result10 = quoteSample10.match(myRegex10); // Change this line
+console.log(result10);
+
+/*
+To create a negated character set, you place a caret character (^) after the opening bracket and before the characters you do not want to match.
+
+For example, /[^aeiou]/gi matches all characters that are not a vowel. Note that characters like ., !, [, @, / and white space are matched - the negated vowel character set only excludes the vowel characters.
+*/
+
+let quoteSample11 = "3 blind mice.";
+let myRegex11 = /[^aeiou1-9]/ig; // Change this line
+let result11 = quoteSample11.match(myRegex11); // Change this line
+console.log(result11);
+
+let difficultSpelling = "Mississippi";
+let myRegex12 = /s+/g;              // this will find any sequences of more than 1 's'
+let result12 = difficultSpelling.match(myRegex12);          // 'ss' 'ss'
 
 
 
