@@ -8,8 +8,10 @@ let testRegex = /Code/;
 console.log(testRegex.test(testStr));        // The test method here returns true.
 
 
-
-
+let petString = "James has a pet cat.";
+let petRegex = /dog|cat|bird|fish/;         // this is the OR option
+let result = petRegex.test(petString);
+console.log(result);
 
 
 
