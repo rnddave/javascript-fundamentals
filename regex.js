@@ -144,8 +144,8 @@ console.log(jennyStr.match(myRegex9));
 */
 
 let quoteSample10 = "Blueberry 3.141592653s are delicious.";
-let myRegex10 = /[h-s2-6]/ig; // Change this line
-let result10 = quoteSample10.match(myRegex10); // Change this line
+let myRegex10 = /[h-s2-6]/ig; 
+let result10 = quoteSample10.match(myRegex10); 
 console.log(result10);
 
 /*
@@ -155,8 +155,8 @@ For example, /[^aeiou]/gi matches all characters that are not a vowel. Note that
 */
 
 let quoteSample11 = "3 blind mice.";
-let myRegex11 = /[^aeiou1-9]/ig; // Change this line
-let result11 = quoteSample11.match(myRegex11); // Change this line
+let myRegex11 = /[^aeiou1-9]/ig; 
+let result11 = quoteSample11.match(myRegex11); 
 console.log(result11);
 
 let difficultSpelling = "Mississippi";
