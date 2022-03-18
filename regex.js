@@ -204,10 +204,35 @@ let theEnding = "This is a never ending story";
 let storyRegex = /story$/;
 storyRegex.test(theEnding);
 let noEnding = "Sometimes a story will have to end";
-console.log(storyRegex.test(noEnding));
+console.log(storyRegex.test(noEnding));         // false
 
 // The first test call would return true, while the second would return false.
 
+/*
+Using character classes, you were able to search for all letters of the alphabet with [a-z]. This kind of character class is common enough that there is a shortcut for it, although it includes a few extra characters as well.
+
+The closest character class in JavaScript to match the alphabet is \w. This shortcut is equal to [A-Za-z0-9_]. This character class matches upper and lowercase letters plus numbers. Note, this character class also includes the underscore character (_). */
+
+let longHand = /[A-Za-z0-9_]+/;
+let shortHand = /\w+/;
+let numbers = "42";
+let varNames = "important_var";
+longHand.test(numbers);
+shortHand.test(numbers);
+longHand.test(varNames);
+shortHand.test(varNames);
+
+// All four of these test calls would return true.
+
+//You can search for the opposite of the \w with \W. Note, the opposite pattern uses a capital letter. This shortcut is the same as [^A-Za-z0-9_].
+
+let shortHand52 = /\W/;
+let numbers52 = "42%";
+let sentence52 = "Coding!";
+numbers52.match(shortHand52);
+sentence52.match(shortHand52);
+
+// The first match call would return the value ["%"] and the second would return ["!"].
 
 
 
