@@ -163,6 +163,22 @@ let difficultSpelling = "Mississippi";
 let myRegex12 = /s+/g;              // this will find any sequences of more than 1 's'
 let result12 = difficultSpelling.match(myRegex12);          // 'ss' 'ss'
 
+/*
+There's also an option that matches characters that occur zero or more times.
+
+The character to do this is the asterisk or star: *.
+
+let soccerWord = "gooooooooal!";
+let gPhrase = "gut feeling";
+let oPhrase = "over the moon";
+let goRegex = /go*/ /*;     // I added this extra comment line else this will uncomment
+soccerWord.match(goRegex);
+gPhrase.match(goRegex);
+oPhrase.match(goRegex);
+
+In order, the three match calls would return the values ["goooooooo"], ["g"], and null.
+
+*/
 
 
 
