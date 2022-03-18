@@ -180,5 +180,21 @@ In order, the three match calls would return the values ["goooooooo"], ["g"], an
 
 */
 
+// You can apply the regex /t[a-z]*i/ to the string "titanic". This regex is basically a pattern that starts with t, ends with i, and has some letters in between.
+
+// However, you can use the ? character to change it to lazy matching. "titanic" matched against the adjusted regex of /t[a-z]*?i/ returns ["ti"].
+
+// Note: Parsing HTML with regular expressions should be avoided, but pattern matching an HTML string with regular expressions is completely fine.
+
+
+
+
+
+
+
+
+
+
+
 
 
