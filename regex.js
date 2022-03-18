@@ -187,6 +187,17 @@ In order, the three match calls would return the values ["goooooooo"], ["g"], an
 // Note: Parsing HTML with regular expressions should be avoided, but pattern matching an HTML string with regular expressions is completely fine.
 
 
+// In an earlier challenge, you used the caret character (^) inside a character set to create a negated character set in the form [^thingsThatWillNotBeMatched]. Outside of a character set, the caret is used to search for patterns at the beginning of strings.
+
+let firstString = "Ricky is first and can be found.";
+let firstRegex = /^Ricky/;
+firstRegex.test(firstString);
+let notFirst = "You can't find Ricky now.";
+console.log(firstRegex.test(notFirst));     // false
+console.log(notFirst);
+
+// The first test call would return true, while the second would return false.
+
 
 
 
