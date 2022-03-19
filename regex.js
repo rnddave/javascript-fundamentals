@@ -243,7 +243,7 @@ The shortcut to look for digit characters is \d, with a lowercase d. This is equ
 let movieName = "2001: A Space Odyssey";
 let numRegex = /\d/g; // Change this line
 let result58 = movieName.match(numRegex).length;
-console.log(movieName.match(numRegex).length);      // 4
+console.log(movieName.match(numRegex).length);          // 4
 
 
 
