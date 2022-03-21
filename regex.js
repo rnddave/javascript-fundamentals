@@ -245,16 +245,6 @@ let numRegex = /\d/g; // Change this line
 let result58 = movieName.match(numRegex).length;
 console.log(movieName.match(numRegex).length);              // 4
 
-
-
-
-
-
-
-
-
-
-
 // The last challenge showed how to search for digits using the shortcut \d with a lowercase d. You can also search for non-digits using a similar shortcut that uses an uppercase D instead.
 
 let movieName64 = "2001: A Space Odyssey";
@@ -263,3 +253,50 @@ let result64 = movieName64.match(noNumRegex64).length;
 console.log(result64);          // 17   
 
 // The shortcut to look for non-digit characters is \D. This is equal to the character class [^0-9], which looks for a single character that is not a number between zero and nine
+
+/*
+Restrict Possible Usernames
+
+Usernames are used everywhere on the internet. They are what give users a unique identity on their favorite sites.
+
+You need to check all the usernames in a database. Here are some simple rules that users have to follow when creating their username.
+
+Usernames can only use alpha-numeric characters.
+
+The only numbers in the username have to be at the end. There can be zero or more of them at the end. Username cannot start with the number.
+
+Username letters can be lowercase and uppercase.
+Usernames have to be at least two characters long. A two-character username can only use alphabet letters as characters.
+*/
+
+let username = "JackOfAllTrades";
+
+// ^            = ^negate anything before the brackets
+// [a-z] [a-z]  = first 2 characters need to be a letter (a-z) and we are using the /i case-insensitive flag
+// + \d         = + one or more digits
+// + $          = + digit needs to be at the end
+// |            = OR
+// ^            = ^negate anything before the brackets
+// [a-z]        = any letter (a-z) and we are using the /i case-insensitive flag
+// + \d         = + one or more digits
+// + $          = + digit needs to be at the end 
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; 
+let result = userCheck.test(username);
+console.log(result);
+console.log(username.match(userCheck));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
