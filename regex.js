@@ -295,6 +295,27 @@ whiteSpace.match(spaceRegex);
 
 // This match call would return [" ", " "].
 
+// You can search for whitespace using \s, which is a lowercase s. This pattern not only matches whitespace, but also carriage return, tab, form feed, and new line characters. You can think of it as similar to the character class [ \r\t\f\n\v].
+
+let whiteSpace = "Whitespace. Whitespace everywhere!"
+let spaceRegex = /\s/g;
+whiteSpace.match(spaceRegex);
+
+// This match call would return [" ", " "]
+
+let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/g; // Change this line
+let resultWhite = sample.match(countWhiteSpace);
+
+// Search for non-whitespace using \S, which is an uppercase s. This pattern will not match whitespace, carriage return, tab, form feed, and new line characters. You can think of it being similar to the character class [^ \r\t\f\n\v].
+
+let whiteSpace70 = "Whitespace. Whitespace everywhere!"
+let nonSpaceRegex70 = /\S/g;
+whiteSpace70.match(nonSpaceRegex70).length;
+
+// The value returned by the .length method would be 32.
+
+
 
 
 
