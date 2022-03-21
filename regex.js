@@ -281,11 +281,19 @@ let username = "JackOfAllTrades";
 // + \d         = + one or more digits
 // + $          = + digit needs to be at the end 
 let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; 
-let result = userCheck.test(username);
-console.log(result);
+let result67 = userCheck.test(username);
+console.log(result67);
 console.log(username.match(userCheck));
 
+/*
+You can search for whitespace using \s, which is a lowercase s. This pattern not only matches whitespace, but also carriage return, tab, form feed, and new line characters. You can think of it as similar to the character class [ \r\t\f\n\v]. 
+*/
 
+let whiteSpace = "Whitespace. Whitespace everywhere!"
+let spaceRegex = /\s/g;
+whiteSpace.match(spaceRegex);
+
+// This match call would return [" ", " "].
 
 
 
