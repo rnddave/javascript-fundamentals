@@ -254,3 +254,12 @@ console.log(movieName.match(numRegex).length);              // 4
 
 
 
+
+// The last challenge showed how to search for digits using the shortcut \d with a lowercase d. You can also search for non-digits using a similar shortcut that uses an uppercase D instead.
+
+let movieName64 = "2001: A Space Odyssey";
+let noNumRegex64 = /\D/g; // Change this line
+let result64 = movieName64.match(noNumRegex64).length;
+console.log(result64);          // 17   
+
+// The shortcut to look for non-digit characters is \D. This is equal to the character class [^0-9], which looks for a single character that is not a number between zero and nine
