@@ -297,9 +297,9 @@ whiteSpace.match(spaceRegex);
 
 // You can search for whitespace using \s, which is a lowercase s. This pattern not only matches whitespace, but also carriage return, tab, form feed, and new line characters. You can think of it as similar to the character class [ \r\t\f\n\v].
 
-let whiteSpace = "Whitespace. Whitespace everywhere!"
-let spaceRegex = /\s/g;
-whiteSpace.match(spaceRegex);
+let whiteSpace67 = "Whitespace. Whitespace everywhere!"
+let spaceRegex67 = /\s/g;
+whiteSpace67.match(spaceRegex67);
 
 // This match call would return [" ", " "]
 
@@ -336,9 +336,29 @@ multipleA.test(A2);
 // Change the regex ohRegex to match the entire phrase Oh no only when it has 3 to 6 letter h's.
 
 let ohStr = "Ohhh no";
-let ohRegex = /Oh{3,6}.no/g; // Change this line
+let ohRegex = /Oh{3,6}.no/g; 
 let result73 = ohRegex.test(ohStr);
 console.log(result73);
+
+/*
+Specify Only the Lower Number of Matches
+
+You can specify the lower and upper number of patterns with quantity specifiers using curly brackets. Sometimes you only want to specify the lower number of patterns with no upper limit.
+
+To only specify the lower number of patterns, keep the first number followed by a comma.
+
+For example, to match only the string hah with the letter a appearing at least 3 times, your regex would be /ha{3,}h/.
+*/
+
+let A4_76 = "haaaah";
+let A2_76 = "haah";
+let A100_76 = "h" + "a".repeat(100) + "h";
+let multipleA76 = /ha{3,}h/;
+multipleA76.test(A4_76);
+multipleA76.test(A2_76);
+multipleA76.test(A100_76);
+
+// In order, the three test calls would return true, false, and true.
 
 
 
