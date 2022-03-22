@@ -519,3 +519,19 @@ let fixRegex97 = /(\w+)\s(\w+)\s(\w+)/;
 let replaceText97 = ('$3 $2 $1'); 
 let result97 = str97.replace(fixRegex97, replaceText97);
 console.log(result97);              // three two one
+
+
+// Write a regex and use the appropriate string methods to remove whitespace at the beginning and end of strings.
+
+let hello99 = "   Hello, World!  ";
+let wsRegex99 = /^\s+|\s+$/g; // Change this line
+let result99 = hello99.replace(wsRegex99, ""); // Change this line
+console.log(hello99);
+console.log(result99);
+
+/* OUTPUT >>>>
+
+   Hello, World!  
+Hello, World!
+
+*/
