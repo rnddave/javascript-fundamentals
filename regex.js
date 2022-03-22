@@ -432,8 +432,23 @@ let password = "abc123";
 let checkPass = /(?=\w{3,6})(?=\D*\d)/;
 checkPass.test(password);
 
+// Use lookaheads in the pwRegex to match passwords that are greater than 5 characters long, and have two consecutive digits.
+
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{6})(?=\w*\d{2})/; // Change this line
+let result88 = pwRegex.test(sampleWord);
 
 
+// If you want to find either Penguin or Pumpkin in a string, you can use the following Regular Expression: /P(engu|umpk)in/g
 
+/*
+Fix the regex so that it checks for the names of Franklin Roosevelt or Eleanor Roosevelt in a case sensitive manner and it should make concessions for middle names.
+
+Then fix the code so that the regex that you have created is checked against myString and either true or false is returned depending on whether the regex matches.
+*/
+
+let myString91 = "Eleanor Roosevelt";
+let myRegex91 = /(Franklin|Eleanor)( |.* )Roosevelt\b/g; // Change this line
+let result91 = myRegex91.test(myString91);
 
 
