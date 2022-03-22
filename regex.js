@@ -360,7 +360,9 @@ multipleA76.test(A100_76);
 
 // In order, the three test calls would return true, false, and true.
 
-
+let haStr79 = "Hazzzzah";
+let haRegex79 = /Haz{4,}ah/; // Change this line
+let result79 = haRegex79.test(haStr79);
 
 
 
