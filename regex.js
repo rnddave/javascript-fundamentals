@@ -493,6 +493,29 @@ let reRegex97 = /^(\d+)\s\1\s\1$/;
 //  \s      space
 //  \1      2nd repeat of first match
 //  $       end (needs to end with match 1 [ defining both a begin (match) and (match) ensures we limit the scope to 3x in this case])
-let result97 = reRegex97.test(repeatNum97);
+let result94 = reRegex97.test(repeatNum97);
 console.log(repeatNum97.match(reRegex97));  // [ '42 42 42', '42', index: 0, input: '42 42 42', groups: undefined ]
 
+/*
+You can search and replace text in a string using .replace() on a string. The inputs for .replace() is first the regex pattern you want to search for. The second parameter is the string to replace the match or a function to do something.
+*/
+
+let wrongText = "The sky is silver.";
+let silverRegex = /silver/;
+wrongText.replace(silverRegex, "blue");
+
+// The replace call would return the string The sky is blue..
+
+// You can also access capture groups in the replacement string with dollar signs ($).
+
+"Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1');
+
+// The replace call would return the string Camp Code.
+
+// Write a regex fixRegex using three capture groups that will search for each word in the string one two three. Then update the replaceText variable to replace one two three with the string three two one and assign the result to the result variable. Make sure you are utilizing capture groups in the replacement string using the dollar sign ($) syntax.
+
+let str97 = "one two three";
+let fixRegex97 = /(\w+)\s(\w+)\s(\w+)/; 
+let replaceText97 = ('$3 $2 $1'); 
+let result97 = str97.replace(fixRegex97, replaceText97);
+console.log(result97);              // three two one
