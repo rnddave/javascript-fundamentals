@@ -482,3 +482,17 @@ console.log(repeatStr94.match(repeatRegex94));
 ]
 */
 
+// Use capture groups in reRegex to match a string that consists of only the same number repeated exactly three times separated by single spaces.
+
+let repeatNum97 = "42 42 42";
+let reRegex97 = /^(\d+)\s\1\s\1$/; 
+//  ^       Start with (this ensures that we define both a start and end - useful if the string has more than 3 matches)
+//  (\d+)   Define matching sequence (digits in this case)
+//  \s      space
+//  \1      1st repeat
+//  \s      space
+//  \1      2nd repeat of first match
+//  $       end (needs to end with match 1 [ defining both a begin (match) and (match) ensures we limit the scope to 3x in this case])
+let result97 = reRegex97.test(repeatNum97);
+console.log(repeatNum97.match(reRegex97));  // [ '42 42 42', '42', index: 0, input: '42 42 42', groups: undefined ]
+
