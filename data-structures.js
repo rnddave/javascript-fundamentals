@@ -33,7 +33,7 @@ let complexArray = [
 
 const ARRAY_LENGTH = 3
 let yourArray01 = []; // Change this line
-for(let i = 0; i<ARRAY_LENGTH; i++) {yourArray01.push(Math.random())}
+for (let i = 0; i < ARRAY_LENGTH; i++) { yourArray01.push(Math.random()) }
 console.log(yourArray01);           //  [ 0.0756827638410218, 0.1836435905978453, 0.34861557436391033 ]
 yourArray01.push(true, 'blah')
 console.log(yourArray01);
@@ -47,6 +47,68 @@ console.log(yourArray01);
   'blah'
 ]
 */
+
+/*
+When we define a simple array as seen below, there are 3 items in it:
+
+let ourArray = ["a", "b", "c"];
+
+In an array, each array item has an index. This index doubles as the position of that item in the array, and how you reference it. However, it is important to note, that JavaScript arrays are zero-indexed, meaning that the first element of an array is actually at the zeroth position, not the first. In order to retrieve an element from an array we can enclose an index in brackets and append it to the end of an array, or more commonly, to a variable which references an array object. This is known as bracket notation. For example, if we want to retrieve the a from ourArray and assign it to a variable, we can do so with the following code:
+
+let ourVariable = ourArray[0];
+
+Now ourVariable has the value of a.
+
+In addition to accessing the value associated with an index, you can also set an index to a value using the same notation:
+
+ourArray[1] = "not b anymore";
+
+Using bracket notation, we have now reset the item at index 1 from the string b, to not b anymore. Now ourArray is ["a", "not b anymore", "c"].
+*/
+
+
+/*
+two methods with which we can programmatically modify an array: Array.push() and Array.unshift().
+
+Both methods take one or more elements as parameters and add those elements to the array the method is being called on; the push() method adds elements to the end of an array, and unshift() adds elements to the beginning. Consider the following: */
+
+let twentyThree = 'XXIII';
+let romanNumerals = ['XXI', 'XXII'];
+
+romanNumerals.unshift('XIX', 'XX');
+console.log(romanNumerals);         // [ 'XIX', 'XX', 'XXI', 'XXII' ]
+
+// romanNumerals would have the value ['XIX', 'XX', 'XXI', 'XXII'].
+
+romanNumerals.push(twentyThree);
+console.log(romanNumerals);         // [ 'XIX', 'XX', 'XXI', 'XXII', 'XXIII' ]
+
+// romanNumerals would have the value ['XIX', 'XX', 'XXI', 'XXII', 'XXIII']. Notice that we can also pass variables, which allows us even greater flexibility in dynamically modifying our array's data.
+
+// We have defined a function, mixedNumbers, which we are passing an array as an argument. Modify the function by using push() and unshift() to add 'I', 2, 'three' to the beginning of the array and 7, 'VIII', 9 to the end so that the returned array contains representations of the numbers 1-9 in order.
+
+function mixedNumbers(arr) {
+    // Only change code below this line
+    arr.unshift('I', 2, 'three');
+    arr.push(7, 'VIII', 9);
+    // Only change code above this line
+    return arr;
+}
+
+console.log(mixedNumbers(['IV', 5, 'six']));
+
+/*
+[
+  'I',     2,
+  'three', 'IV',
+  5,       'six',
+  7,       'VIII',
+  9
+]
+*/
+
+
+
 
 
 
