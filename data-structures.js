@@ -151,9 +151,9 @@ function htmlColorNames(arr) {
     arr.splice(0, 2, 'DarkSalmon', 'BlanchedAlmond')
     // Only change code above this line
     return arr;
-  }
-  
-  console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+}
+
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
 
 /*
 The next method we will cover is slice(). Rather than modifying an array, slice() copies or extracts a given number of elements to a new array, leaving the array it is called upon untouched. slice() takes only 2 parameters — the first is the index at which to begin extraction, and the second is the index at which to stop extraction (extraction will occur up to, but not including the element at this index). Consider this:
@@ -173,15 +173,15 @@ function forecast(arr) {
     let newArr = arr.slice(2, 4)
 
     return newArr;
-  
-  }
-    
-  // Only change code above this line
-  console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+}
+
+// Only change code above this line
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
 
 
-  /*
-  ES6's new spread operator allows us to easily copy all of an array's elements, in order, with a simple and highly readable syntax. The spread syntax simply looks like this: ...
+/*
+ES6's new spread operator allows us to easily copy all of an array's elements, in order, with a simple and highly readable syntax. The spread syntax simply looks like this: ...
 
 In practice, we can use the spread operator to copy an array like so:
 
@@ -198,17 +198,48 @@ thatArray equals [true, true, undefined, false, null]. thisArray remains unchang
 function copyMachine(arr, num) {
     let newArr_40 = [];
     while (num >= 1) {
-      // Only change code below this line
-      newArr_40.push([...arr]);
-      // Only change code above this line
-      num--;
+        // Only change code below this line
+        newArr_40.push([...arr]);
+        // Only change code above this line
+        num--;
     }
     return newArr_40;
-  }
-  
-  console.log(copyMachine([true, false, true], 2));     // [ [ true, false, true ], [ true, false, true ] ]
+}
 
-  
+console.log(copyMachine([true, false, true], 2));     // [ [ true, false, true ], [ true, false, true ] ]
+
+// Another huge advantage of the spread operator is the ability to combine arrays, or to insert all the elements of one array into another, at any index. With more traditional syntaxes, we can concatenate arrays, but this only allows us to combine arrays at the end of one, and at the start of another. 
+
+let thisArray_45 = ['sage', 'rosemary', 'parsley', 'thyme'];
+
+let thatArray_45 = ['basil', 'cilantro', ...thisArray_45, 'coriander'];
+
+console.log(thisArray_45, thatArray_45);
+/*
+[ 'sage', 'rosemary', 'parsley', 'thyme' ] [
+  'basil',
+  'cilantro',
+  'sage',
+  'rosemary',
+  'parsley',
+  'thyme',
+  'coriander'
+]
+*/
+
+/*
+Since arrays can be changed, or mutated, at any time, there's no guarantee about where a particular piece of data will be on a given array, or if that element even still exists. Luckily, JavaScript provides us with another built-in method, indexOf(), that allows us to quickly and easily check for the presence of an element on an array. indexOf() takes an element as a parameter, and when called, it returns the position, or index, of that element, or -1 if the element does not exist on the array.
+
+For example: */
+
+let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
+
+console.log(fruits.indexOf('dates'));
+console.log(fruits.indexOf('oranges'));
+console.log(fruits.indexOf('pears'));
+
+// indexOf('dates') returns -1, indexOf('oranges') returns 2, and indexOf('pears') returns 1 (the first index at which each element exists).
+
 
 
 
