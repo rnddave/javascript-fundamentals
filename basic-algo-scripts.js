@@ -18,4 +18,31 @@ function convertToF_06(celsius) {
   
   convertToF_06(30);
 
+/*
+Reverse a String
+
+Reverse the provided string.
+
+You may need to turn the string into an array before you can reverse it.
+
+Your result must be a string.
+*/
+
+function reverseString(str) {
+    console.log(str);
+  
+    let newArr = []           // an array
+    newArr = str.split('');   // string to array
+    console.log(newArr);      // what does it look like?
+  
+    newArr.reverse();         // now to reverse the array
+    console.log(newArr);      // look like
+  
+    str = newArr.join('');    // back to a string (need the '' to avoid comma between char)
+    console.log(str)          // look like          //  olleh
+  
+    return str;
+  }
+  
+  reverseString("hello");
 
