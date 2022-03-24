@@ -250,16 +250,30 @@ function filteredArray(arr, elem) {
     let newArr = [];
     // Only change code below this line
     for (let i = 0; i < arr.length; i++) {
-      if (arr[i].indexOf(elem) == -1) {
-        newArr.push(arr[i]); 
-      }
+        if (arr[i].indexOf(elem) == -1) {
+            newArr.push(arr[i]);
+        }
     }
     // Only change code above this line
     return newArr;
-  }
-  
-  console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+}
 
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));
+
+// We have defined a variable, myNestedArray, set equal to an array. Modify myNestedArray, using any combination of strings, numbers, and booleans for data elements, so that it has exactly five levels of depth (remember, the outer-most array is level 1). Somewhere on the third level, include the string deep, on the fourth level, include the string deeper, and on the fifth level, include the string deepest.
+
+
+let myNestedArray = [
+    // change code below this line
+    ["unshift", false, 1, 2, 3, "complex", "nested"],
+    ["loop", "shift", 6, 7, 1000, "method"],
+    ["concat", false, true, "spread", "array", ["deep"]],
+    ["mutate", 1327.98, "splice", "slice", "push", [["deeper"]]],
+    ["iterate", 1.3849, 7, "8.4876", "arbitrary", "depth", [[["deepest"]]]]
+    // change code above this line
+  ];
+
+  
 
 
 
