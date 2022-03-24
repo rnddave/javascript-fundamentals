@@ -72,8 +72,38 @@ function factorialize(num) {
 
 factorialize(5);
 
+/*
+Find the Longest Word in a String
+
+Return the length of the longest word in the provided sentence.
+
+Your response should be a number.
+*/
 
 
+function findLongestWordLength(str) {
+    console.log(str.length);  // look like
+
+    let newArr = []           // an array
+    newArr = str.split(' ');  // string to array
+    console.log(newArr);      // look like
+
+    let longest = 0;          // string length = 0
+
+    for (let i = 0; i < newArr.length; i++) {
+        if (newArr[i].length > longest) {
+                            // if element.length is longer than 0 then (1st)
+                            // if next loop length is bigger than longest then
+            longest = newArr[i].length;
+                            // record the length
+        }
+
+    }
+    console.log(longest);       // 6
+    return longest;
+}
+
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
 
 
 
