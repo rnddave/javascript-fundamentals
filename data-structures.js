@@ -271,15 +271,15 @@ let myNestedArray = [
     ["mutate", 1327.98, "splice", "slice", "push", [["deeper"]]],
     ["iterate", 1.3849, 7, "8.4876", "arbitrary", "depth", [[["deepest"]]]]
     // change code above this line
-  ];
+];
 
-  /*
-  At their most basic, objects are just collections of key-value pairs. In other words, they are pieces of data (values) mapped to unique identifiers called properties (keys). Take a look at an example:
+/*
+At their most basic, objects are just collections of key-value pairs. In other words, they are pieces of data (values) mapped to unique identifiers called properties (keys). Take a look at an example:
 
 const tekkenCharacter = {
-  player: 'Hwoarang',
-  fightingStyle: 'Tae Kwon Doe',
-  human: true
+player: 'Hwoarang',
+fightingStyle: 'Tae Kwon Doe',
+human: true
 };
 
 The above code defines a Tekken video game character object called tekkenCharacter. It has three properties, each of which map to a specific value. If you want to add an additional property, such as "origin", it can be done by assigning origin to the object:
@@ -299,12 +299,12 @@ tekkenCharacter[eyes] = 'brown';
 After adding all the examples, the object will look like this:
 
 {
-  player: 'Hwoarang',
-  fightingStyle: 'Tae Kwon Doe',
-  human: true,
-  origin: 'South Korea',
-  'hair color': 'dyed orange',
-  'eye color': 'brown'
+player: 'Hwoarang',
+fightingStyle: 'Tae Kwon Doe',
+human: true,
+origin: 'South Korea',
+'hair color': 'dyed orange',
+'eye color': 'brown'
 };
 */
 
@@ -314,24 +314,24 @@ let foods = {
     apples: 25,
     oranges: 32,
     plums: 28
-  };
-  
-  // Only change code below this line
-  foods.bananas = 13;
-  foods['grapes'] = 35;
-  const lastOne = 'strawberries';
-  foods[lastOne] = 27;
-  // Only change code above this line
-  
-  console.log(foods);
+};
 
-  // Use the delete keyword to remove the oranges, plums, and strawberries keys from the foods object.
+// Only change code below this line
+foods.bananas = 13;
+foods['grapes'] = 35;
+const lastOne = 'strawberries';
+foods[lastOne] = 27;
+// Only change code above this line
 
-  delete foods.apples;
+console.log(foods);
 
-  /*
+// Use the delete keyword to remove the oranges, plums, and strawberries keys from the foods object.
 
-  Now we can add, modify, and remove keys from objects. But what if we just wanted to know if an object has a specific property? JavaScript provides us with two different ways to do this. One uses the hasOwnProperty() method and the other uses the in keyword. If we have an object users with a property of Alan, we could check for its presence in either of the following ways:
+delete foods.apples;
+
+/*
+
+Now we can add, modify, and remove keys from objects. But what if we just wanted to know if an object has a specific property? JavaScript provides us with two different ways to do this. One uses the hasOwnProperty() method and the other uses the in keyword. If we have an object users with a property of Alan, we could check for its presence in either of the following ways:
 
 users.hasOwnProperty('Alan');
 'Alan' in users;
@@ -343,37 +343,64 @@ Both of these would return true.
 
 let users = {
     Alan: {
-      age: 27,
-      online: true
+        age: 27,
+        online: true
     },
     Jeff: {
-      age: 32,
-      online: true
+        age: 32,
+        online: true
     },
     Sarah: {
-      age: 48,
-      online: true
+        age: 48,
+        online: true
     },
     Ryan: {
-      age: 19,
-      online: true
+        age: 19,
+        online: true
     }
-  };
-  
-  function isEveryoneHere(userObj) {
+};
+
+function isEveryoneHere(userObj) {
     // Only change code below this line
     if (userObj.hasOwnProperty('Alan') && userObj.hasOwnProperty('Jeff') && userObj.hasOwnProperty('Jeff') && userObj.hasOwnProperty('Sarah') && userObj.hasOwnProperty('Ryan')) {
-      return true;
+        return true;
     }
     else {
-      return false;
+        return false;
     }
     // Only change code above this line
-  }
-  
-  console.log(isEveryoneHere(users));       // true
+}
 
-  
+console.log(isEveryoneHere(users));       // true
+
+const users85 = {
+    Alan: {
+        online: false
+    },
+    Jeff: {
+        online: true
+    },
+    Sarah: {
+        online: false
+    }
+}
+
+function countOnline(usersObj) {
+    // Only change code below this line
+    let onlineCount = 0
+    for (let user in usersObj) {
+        if (usersObj[user].online == true) {
+            console.log(user)               // Jeff
+            onlineCount++
+        }
+
+    }
+    return onlineCount;
+    // Only change code above this line
+}
+
+console.log(countOnline(users85));          // 1
+
 
 
 
