@@ -92,10 +92,10 @@ function findLongestWordLength(str) {
 
     for (let i = 0; i < newArr.length; i++) {
         if (newArr[i].length > longest) {
-                            // if element.length is longer than 0 then (1st)
-                            // if next loop length is bigger than longest then
+            // if element.length is longer than 0 then (1st)
+            // if next loop length is bigger than longest then
             longest = newArr[i].length;
-                            // record the length
+            // record the length
         }
 
     }
@@ -105,9 +105,39 @@ function findLongestWordLength(str) {
 
 findLongestWordLength("The quick brown fox jumped over the lazy dog");
 
+/*
+Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
 
+Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
+*/
 
+function largestOfFour(arr) {
+    let anotherNewArray = [];
 
+    for (let i = 0; i < arr.length; i++) {
+        let tempNum = arr[i];
+        let bigOnes = -Infinity;
+
+        for (let j = 0; j < tempNum.length; j++) {
+            if (tempNum[j] > bigOnes) {
+                bigOnes = tempNum[j];
+            }
+        }
+        anotherNewArray.push(bigOnes);
+    }
+    console.log(anotherNewArray);
+    return anotherNewArray;
+
+    //return arr;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+largestOfFour([[17, 23, 25, 12], [25, 7, 34, 48], [4, -10, 18, 21], [-72, -3, -17, -10]])
+
+/*
+[ 5, 27, 39, 1001 ]
+[ 25, 48, 21, -3 ]
+*/
 
 
 
