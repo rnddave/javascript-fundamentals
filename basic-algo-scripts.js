@@ -149,11 +149,30 @@ This challenge can be solved with the .endsWith() method, which was introduced i
 function confirmEnding(str, target) {
     console.log(str.indexOf(target, str.length - target.length) !== -1);    //true
     return str.indexOf(target, str.length - target.length) !== -1;
-  }
-  
-  confirmEnding("Bastian", "n");
+}
 
+confirmEnding("Bastian", "n");
 
+// Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number. For the purpose of this challenge, do not use the built-in .repeat() method.
+
+function repeatStringNumTimes(str, num) {
+    let newString = '';
+
+    if (num > 0) {
+        for (let i = 0; i < num; i++) {
+            newString += str;
+            console.log(newString);
+        }
+        return newString;
+    }
+    else {
+        return newString;
+    }
+    
+}
+
+repeatStringNumTimes("abc", 3);
+repeatStringNumTimes("abc", -3);
 
 
 
