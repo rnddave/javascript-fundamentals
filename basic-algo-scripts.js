@@ -155,12 +155,12 @@ confirmEnding("Bastian", "n");
 
 // Repeat a given string str (first argument) for num times (second argument). Return an empty string if num is not a positive number. For the purpose of this challenge, do not use the built-in .repeat() method.
 
-function repeatStringNumTimes(str, num) {
+function repeatStringNumTimes(str38, num38) {
     let newString = '';
 
-    if (num > 0) {
-        for (let i = 0; i < num; i++) {
-            newString += str;
+    if (num38 > 0) {
+        for (let i = 0; i < num38; i++) {
+            newString += str38;
             console.log(newString);
         }
         return newString;
@@ -168,13 +168,27 @@ function repeatStringNumTimes(str, num) {
     else {
         return newString;
     }
-    
+
 }
 
 repeatStringNumTimes("abc", 3);
 repeatStringNumTimes("abc", -3);
 
+// Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
 
+function truncateString(str50, num50) {
+    //let newString44 = '';
+
+    if (str50.length > num50) {
+        //newString44
+        console.log(str50.slice(0, num50) + '...');
+        return str50.slice(0, num50) + '...';
+    } else {
+        return str50;
+    }
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
 
 
 
