@@ -8,3 +8,25 @@
 
 // BONUS: Make a program that can subtract, multiply, and also divide!
 
+alert('You will be asked for 2 numbers and an operator');
+var num1 = prompt('enter the first number ');
+var num2 = prompt('enter the second number ');
+var oper = prompt('do you want to +, -, *, / ?');
+
+if (oper === '+') {
+    sum = num1 + num2;
+    alert('the answer is: ' + sum);
+} else if (oper === '-') {
+    sum = num1 - num2;
+    alert('the answer is: ' + sum);
+} else if (oper === '*') {
+    sum = num1 * num2;
+    alert('the answer is: ' + sum);
+} else if (oper === '/') {
+    sum = num1 / num2;
+    alert('the answer is: ' + sum);
+} else {
+    alert('you did not enter the correct inputs');
+}
+
+// this works fine!
