@@ -25,7 +25,9 @@ it returns "Powering On. Enjoy the ride!" */
 
 //1. Make the above code have a function called checkDriverAge()
 
-function checkDriverAge(age) {
+function checkDriverAge() {
+    var age = prompt('how old are you?'); 
+
     if (Number(age) < 18) {
         alert("Sorry, you are too yound to drive this car. Powering off");
     } else if (Number(age) > 18) {
@@ -35,9 +37,7 @@ function checkDriverAge(age) {
     }
 }
 
-var age = prompt('how old are you?'); 
-
-checkDriverAge(age);
+checkDriverAge();
 
 // the above works fine for me! 
 
