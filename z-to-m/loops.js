@@ -62,3 +62,55 @@ for (var item=0; item < lengthOfList; item++) {
 }
 
 // this now performs as expected.
+
+//-------------------------
+
+// while loops 
+
+var someRandomCounter = 0
+
+while (someRandomCounter < 10) { // note this says 'while LESS than 10, so will stop at 9
+    console.log(someRandomCounter);
+    someRandomCounter++;
+}
+
+var someRandomCounter = 0
+while (someRandomCounter <= 10) { 
+    console.log(someRandomCounter);
+    someRandomCounter++;
+}
+
+// -----------------
+
+// DO WHILE LOOPS
+
+var someRandomCounter2 = 10
+
+do {
+    console.log(someRandomCounter2);
+    someRandomCounter2--;
+} while (someRandomCounter2 > 0);
+
+// similar to while loop, but it's all about when we check the condition 
+
+// while = check condition first - then do the work
+// DO WHILE = do the thing first and THEN check the condition 
+
+// ----------------------------------
+
+// NEW FOR ECMASCRIPT 5 = FOR EACH
+
+var todoList2 = [
+    'vacuum the downstairs',
+    'vacuum the upstairs',
+    'clean the hard floors',
+    'check for cobwebs and remove',
+    'move the switch and switch games out of reach',
+    'shoulkd we get some toys from conservatory?'
+];
+
+todoList2.forEach(function(item) {
+    console.log(item);
+});
+
+// definitely looks nicer than the old FOR loop
