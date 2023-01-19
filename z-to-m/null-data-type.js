@@ -21,3 +21,4 @@ nullObj6.name = 'david';
 
 // returns error, cannot set property 'name' of null
 
+// apparently this is more useful to us in later real-world exercises - currently kind of useless.... 
