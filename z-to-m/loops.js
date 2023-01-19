@@ -109,8 +109,14 @@ var todoList2 = [
     'shoulkd we get some toys from conservatory?'
 ];
 
-todoList2.forEach(function(item) {
+todoList2.forEach(function(item) {      // note you can pass more than one parameter, this param = the element
     console.log(item);
 });
 
 // definitely looks nicer than the old FOR loop
+
+todoList2.forEach(function(item, i) {   // this = element AND index
+    console.log(item, i);               // this = element AND index
+});
+
+// UNFORTUNATELY - doesn't work with all browsers but most, at time of writing, only not working on OperaMini
