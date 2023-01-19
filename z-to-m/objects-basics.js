@@ -10,4 +10,8 @@ var userDetails = {
     }
 };
 
-userDetails.canSay()
+userDetails.canSay();
+
+userDetails.favouriteCountry = 'China'; // add things to the object
+
+userDetails.favouriteCountry = ['china', 'france']; // change things in the object
