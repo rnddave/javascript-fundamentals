@@ -34,16 +34,16 @@ var passwordPrompt = prompt('what is the password?');
 function signIn(username, password) {
 
     // I will try a FOR loop 
-    // below code did not work, I receive a 'password does not match for each entry in database
+    // below code is kind of working; however, it currently checks each user in order, so, if I use Xiao, I initially get the 'password does not match' error (against the David user), then it checks xiao and matches. Does not continue the loop (thanks to break;)
 
     for(var u=0; u < userList.length; u++) {
-        console.log(userList[u].username);
+        console.log(userList[u].username);  
 
         if (username === userList[u].username && password === userList[u].password) { 
-            console.log('does it do the U/P check');
+            console.log(userList[u].username + ' matched');
             alert('welcome back ' + userList[u].username);
-            console.log(username[u]);
-            console.log(newsFeed);                                  
+            console.log(newsFeed);    
+            break;                              
                                                                     
         } else {
             alert('username or password is incorrect!');
