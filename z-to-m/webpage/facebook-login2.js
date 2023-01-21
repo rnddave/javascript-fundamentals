@@ -59,23 +59,27 @@ function signIn(username, password) {
 
 */
 
-function signIn(username, password) {
-
+function validUserCheck(username, password) {
     for(var u=0; u < userList.length; u++) {
         console.log(userList[u].username);  
-
         if (username === userList[u].username && password === userList[u].password) { 
             console.log(userList[u].username + ' matched');
-            alert('welcome back ' + userList[u].username);
-            console.log(newsFeed);    
-            break;                              
-                                                                    
-        } else {
-            alert('username or password is incorrect!');
+            return true;
+        }
+        else {
+            alert('wrong!');
         }
     }
+    return false;
+}
 
-    
+function signIn(username, password) {
+
+    validUserCheck(username, password);
+        
+    alert('welcome back ' + userList[u].username);
+    console.log(newsFeed);    
+
 } 
 
 
