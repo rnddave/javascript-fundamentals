@@ -31,6 +31,10 @@ var newsFeed = [
 var userNamePrompt = prompt('what is your username?');
 var passwordPrompt = prompt('what is the password?');
 
+/* 
+
+SO THIS DID NOT WORK, REVERT TO VIDEO, POSSIBLY HAVE THE FOR AND IF IN WRONG PLACE... 
+
 function signIn(username, password) {
 
     // I will try a FOR loop 
@@ -51,9 +55,33 @@ function signIn(username, password) {
     }
 
     
-}
+} 
+
+*/
+
+function signIn(username, password) {
+
+    for(var u=0; u < userList.length; u++) {
+        console.log(userList[u].username);  
+
+        if (username === userList[u].username && password === userList[u].password) { 
+            console.log(userList[u].username + ' matched');
+            alert('welcome back ' + userList[u].username);
+            console.log(newsFeed);    
+            break;                              
+                                                                    
+        } else {
+            alert('username or password is incorrect!');
+        }
+    }
+
+    
+} 
+
 
 signIn(userNamePrompt, passwordPrompt);
+
+
 
 
 
