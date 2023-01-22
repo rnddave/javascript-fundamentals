@@ -73,6 +73,8 @@ function validUserCheck(username, password) {
     return false;
 }
 
+// something not working in the logic here
+
 function signIn(username, password) {
 
     validUserCheck(username, password);
