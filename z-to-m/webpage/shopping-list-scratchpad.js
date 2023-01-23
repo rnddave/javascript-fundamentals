@@ -39,18 +39,29 @@ button.addEventListener('click', function() {
 SO LETS FIX THAT 
 */
 
-
 button.addEventListener('click', function() {
     
     if (userInput.value.length > 0) {
         var li = document.createElement('li');
-
         li.appendChild(document.createTextNode(userInput.value));
         ul.appendChild(li);
-
-        console.log(userInput.value); // testing
+        userInput.value = ''; // this clears the input box after input
     } 
 })
+
+// now we'll add a listener for the enter key (so don't need mouse clicks)
+
+userInput.addEventListener('keypress', function(event) {
+    
+    if (userInput.value.length > 0 && event.keyCode === 13) {
+        var li = document.createElement('li');
+        li.appendChild(document.createTextNode(userInput.value));
+        ul.appendChild(li);
+        userInput.value = ''; // this clears the input box after input
+    } 
+})
+
+// THIS ALL WORKS (above) BUT there is a lotof DUPLICATION
 
 
 /* these are really useful: 
