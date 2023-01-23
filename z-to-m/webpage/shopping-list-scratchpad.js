@@ -88,6 +88,27 @@ function createListElement() {
     userInput.value = ''; // this clears the input box after input
 }
 
+// THIRD we can have a function for adding LI
+function addListItemsAfterClick() {
+    if (inputLengthCheck() > 0) {
+        createListElement();
+    } 
+}
+
+function addListItemsAfterEnter() {
+    if (inputLengthCheck() > 0 && event.keyCode === 13) {
+        createListElement();
+    }
+}
+
+
+// button click listener
+button.addEventListener('click', addListItemsAfterClick);
+
+// listener for the enter key (so don't need mouse clicks)
+userInput.addEventListener('keypress', addListItemsAfterEnter);
+
+/* 
 // button click listener
 button.addEventListener('click', function() {
     
@@ -102,6 +123,7 @@ userInput.addEventListener('keypress', function(event) {
     if (inputLengthCheck() > 0 && event.keyCode === 13) {
         createListElement();
     } 
-})
+}) 
+*/
 
 

@@ -20,22 +20,24 @@ function createListElement() {
     userInput.value = ''; // this clears the input box after input
 }
 
-// HOW DO WE GET THOSE INPUTS?
-
-// button click listener
-button.addEventListener('click', function() {
-    
+function addListItemsAfterClick() {
     if (inputLengthCheck() > 0) {
         createListElement();
     } 
-})
+}
 
-// listener for the enter key (so don't need mouse clicks)
-userInput.addEventListener('keypress', function(event) {
-    
+function addListItemsAfterEnter() {
     if (inputLengthCheck() > 0 && event.keyCode === 13) {
         createListElement();
-    } 
-})
+    }
+}
+
+// HOW DO WE GET THOSE INPUTS?
+
+// button click listener
+button.addEventListener('click', addListItemsAfterClick);
+
+// listener for the enter key (so don't need mouse clicks)
+userInput.addEventListener('keypress', addListItemsAfterEnter);
 
 
