@@ -66,9 +66,6 @@ function validUserCheck(username, password) {
             console.log(userList[u].username + ' matched');
             return true;
         }
-        else {
-            alert('wrong!');
-        }
     }
     return false;
 }
@@ -79,7 +76,7 @@ function signIn(username, password) {
 
     validUserCheck(username, password);
         
-    alert('welcome back ' + userList[u].username);
+    alert('welcome back ' + username);  // I had the userlist[u].username here and this was throwing an error as this doesn't know the [u] reference as that's in it's own function now... silly me.
     console.log(newsFeed);    
 
 } 
