@@ -70,7 +70,22 @@ function validUserCheck(username, password) {
     return false;
 }
 
-// something not working in the logic here
+
+function signIn(username, password) {
+
+    if (validUserCheck(username, password)) {
+        alert('welcome back ' + username);  
+        console.log(newsFeed);    
+    } else {
+        alert('Incorrect Username or Passwrd');
+    }
+} 
+
+
+
+/* 
+
+THIS KIND OF WORKS - BUT NO LONGER HAS THE 'IF INCORRECT USERNAME/PASSWORD' RESPONSE
 
 function signIn(username, password) {
 
@@ -78,8 +93,7 @@ function signIn(username, password) {
         
     alert('welcome back ' + username);  // I had the userlist[u].username here and this was throwing an error as this doesn't know the [u] reference as that's in it's own function now... silly me.
     console.log(newsFeed);    
-
-} 
+}  */
 
 
 signIn(userNamePrompt, passwordPrompt);
