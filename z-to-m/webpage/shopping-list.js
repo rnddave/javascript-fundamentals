@@ -26,7 +26,7 @@ function addListItemsAfterClick() {
     } 
 }
 
-function addListItemsAfterEnter() {
+function addListItemsAfterEnter(event) {
     if (inputLengthCheck() > 0 && event.keyCode === 13) {
         createListElement();
     }
