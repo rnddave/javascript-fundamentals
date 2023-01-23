@@ -39,7 +39,7 @@ button.addEventListener('click', function() {
 SO LETS FIX THAT 
 */
 
-button.addEventListener('click', function() {
+/* button.addEventListener('click', function() {
     
     if (userInput.value.length > 0) {
         var li = document.createElement('li');
@@ -61,7 +61,7 @@ userInput.addEventListener('keypress', function(event) {
     } 
 })
 
-// THIS ALL WORKS (above) BUT there is a lotof DUPLICATION
+// THIS ALL WORKS (above) BUT there is a lotof DUPLICATION */
 
 
 /* these are really useful: 
@@ -71,4 +71,37 @@ createTextNode
 appendChild
 
 PRACTICE // PRACTICE // PRACTICE */
+
+// lets refactor the code: 
+
+// FIRST we can see both code blocks are doing a input length check, so lets simplify that
+function inputLengthCheck() {
+    return userInput.value.length;
+}
+
+// SECOND we can see a lot of duplicated code around creating the LI updates
+
+function createListElement() {
+    var li = document.createElement('li');
+    li.appendChild(document.createTextNode(userInput.value));
+    ul.appendChild(li);
+    userInput.value = ''; // this clears the input box after input
+}
+
+// button click listener
+button.addEventListener('click', function() {
+    
+    if (inputLengthCheck() > 0) {
+        createListElement();
+    } 
+})
+
+// listener for the enter key (so don't need mouse clicks)
+userInput.addEventListener('keypress', function(event) {
+    
+    if (inputLengthCheck() > 0 && event.keyCode === 13) {
+        createListElement();
+    } 
+})
+
 
