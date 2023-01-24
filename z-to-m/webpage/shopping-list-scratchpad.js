@@ -126,4 +126,12 @@ userInput.addEventListener('keypress', function(event) {
 }) 
 */
 
+///////// ------------------ /////////
+
+// now to strike things from the list 
+
+function haveThisItem() {
+
+    // need to detect a mouse click on an item and then strike it off
+}
 
