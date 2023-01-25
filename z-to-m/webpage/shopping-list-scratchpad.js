@@ -193,6 +193,14 @@ function addListItemsAfterEnter(event) {
     }
 }
 
+function strikeThru(e) {
+    var whatID = e.target.id;
+    if (whatID > 0) {
+        //whatID.classList.toggle('done'); // doesn't work
+        //whatID.target.classList.toggle('class="done"'); // doesn't work
+        document.getElementById(whatID).classList.toggle('done'); // from Stack Overflow - so damn simple :-/
+    }
+}
 
 // button click listener
 button.addEventListener('click', addListItemsAfterClick);
@@ -200,11 +208,39 @@ button.addEventListener('click', addListItemsAfterClick);
 // listener for the enter key (so don't need mouse clicks)
 userInput.addEventListener('keypress', addListItemsAfterEnter);
 
-// strikethru on completed items
+// strike off a completed item
+ul.addEventListener('click', strikeThru);
 
-ul.addEventListener('click', function(e) {
+
+// identify which item was clicked
+
+/* li.addEventListener('click', strikeThru);
+
+
+function whatWasClicked() {   
+    ul.addEventListener('click', function(e) {
+        var whatID = e.target.id;
+        //console.log('you clicked LI element with the ID Number: ' + whatID );
+        return whatID;    
+    }, false);
+}
+
+function strikeThru() {
+    whatWasClicked();
+    console.log(whatWasClicked());
+    
+} */
+
+/* ul.addEventListener('click', function(e) { // this was taken from StackOverflow answer
     console.log('you clicked LI element with the ID Number: ' + e.target.id );  // after MANY attempts, this at least detects and displays the ID No. of the LI item clicked
-}, false);
+    e.target.id.classList.add('done');
+}, false); */
+
+
+// OKay I think the problem is that I need an expression to detect the ID and then an expression to apply the change. probably a for loop
+
+
+
 
 /* ul.addEventListener('click', function () {
     alert('this UL item was clicked ' + idNo);
