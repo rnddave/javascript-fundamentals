@@ -130,8 +130,26 @@ userInput.addEventListener('keypress', function(event) {
 
 // now to strike things from the list 
 
-function haveThisItem() {
+/* $(document).ready(function() {
+    $('ul > li').click(function() {
+
+        $(this).children('ul').classList.add('done');
+    });
+}); */
+
+ul.addEventListener('click', function () {
+    alert('this UL item was clicked'+this.children);
+    //ul.style.font = 'done';
+    ul.classList.add('done');
+    
+});
+
+/* function markDone() {
 
     // need to detect a mouse click on an item and then strike it off
-}
 
+    ul.addEventListener('click', function () {
+        alert('this UL item was clicked');
+    });
+}
+ */
