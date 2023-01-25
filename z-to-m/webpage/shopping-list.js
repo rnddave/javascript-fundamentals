@@ -18,6 +18,7 @@ function createListElement() {
     li.appendChild(document.createTextNode(userInput.value));
     ul.appendChild(li);
     userInput.value = ''; // this clears the input box after input
+    
 }
 
 function addListItemsAfterClick() {
