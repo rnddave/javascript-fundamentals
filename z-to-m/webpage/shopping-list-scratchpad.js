@@ -1,9 +1,9 @@
 
 // variables for the data collection
 
-var button = document.getElementById('addItemToList');
+/* var button = document.getElementById('addItemToList');
 var userInput = document.getElementById('userInputBox');
-var ul = document.getElementById('shoppingList');
+var ul = document.getElementById('shoppingList'); */
 
 // what do we want the button to do
 
@@ -75,21 +75,21 @@ PRACTICE // PRACTICE // PRACTICE */
 // lets refactor the code: 
 
 // FIRST we can see both code blocks are doing a input length check, so lets simplify that
-function inputLengthCheck() {
+/* function inputLengthCheck() {
     return userInput.value.length;
-}
+} */
 
 // SECOND we can see a lot of duplicated code around creating the LI updates
 
-function createListElement() {
+/* function createListElement() {
     var li = document.createElement('li');
     li.appendChild(document.createTextNode(userInput.value));
     ul.appendChild(li);
     userInput.value = ''; // this clears the input box after input
-}
+} */
 
 // THIRD we can have a function for adding LI
-function addListItemsAfterClick() {
+/* function addListItemsAfterClick() {
     if (inputLengthCheck() > 0) {
         createListElement();
     } 
@@ -107,7 +107,7 @@ button.addEventListener('click', addListItemsAfterClick);
 
 // listener for the enter key (so don't need mouse clicks)
 userInput.addEventListener('keypress', addListItemsAfterEnter);
-
+ */
 /* 
 // button click listener
 button.addEventListener('click', function() {
@@ -137,12 +137,11 @@ userInput.addEventListener('keypress', function(event) {
     });
 }); */
 
-ul.addEventListener('click', function () {
-    alert('this UL item was clicked'+this.children);
-    //ul.style.font = 'done';
+/* ul.addEventListener('click', function () {
+    alert('this UL item was clicked');
     ul.classList.add('done');
     
-});
+}); */
 
 /* function markDone() {
 
@@ -153,3 +152,55 @@ ul.addEventListener('click', function () {
     });
 }
  */
+
+
+var button = document.getElementById('addItemToList');
+var userInput = document.getElementById('userInputBox');
+var ul = document.getElementById('shoppingList');
+//var idNo = 0; // I was trying to add a unique ID number for each new LI item so that I could later target them
+
+function inputLengthCheck() {
+    return userInput.value.length;
+}
+
+function createListElement() {
+    var li = document.createElement('li');
+    li.appendChild(document.createTextNode(userInput.value));
+    ul.appendChild(li);
+    //li.id.add('${idNo}');
+    userInput.value = ''; // this clears the input box after input
+    //idNo++;
+}
+
+function addListItemsAfterClick() {
+    if (inputLengthCheck() > 0) {
+        createListElement();
+    } 
+}
+
+function addListItemsAfterEnter(event) {
+    if (inputLengthCheck() > 0 && event.keyCode === 13) {
+        createListElement();
+    }
+}
+
+
+// button click listener
+button.addEventListener('click', addListItemsAfterClick);
+
+// listener for the enter key (so don't need mouse clicks)
+userInput.addEventListener('keypress', addListItemsAfterEnter);
+
+// strikethru on completed items
+/* ul.addEventListener('click', function () {
+    alert('this UL item was clicked');
+    ul.classList.add('done'); // unfortunately this marks all the UL items as done! 
+}); */ // I realise this is probablyh because I am performing against the UL not the individual LI item...
+
+li.addEventListener('click', function () {
+    alert('this UL item was clicked');
+    li.classList.add('done'); // unfortunately this marks all the UL items as done! 
+});
+
+
+
