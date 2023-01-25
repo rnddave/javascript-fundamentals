@@ -151,9 +151,14 @@ function inputLengthCheck() {
 function createListElement() {
     var li = document.createElement('li');
     var idNo = ul.children.length + 1;
+    var delBtn = document.createElement('button');
+
     li.appendChild(document.createTextNode(userInput.value));
+    delBtn.innerHTML = 'Delete this item';
+    delBtn.classList.add('deleteMe');
     ul.appendChild(li);
     li.setAttribute("id", +idNo);
+    li.appendChild(delBtn); // this adds the buttom, toggle still works, but no space between button and list item
     //li.id.add('${idNo}');
     userInput.value = ''; // this clears the input box after input
     //idNo++; // originally trying to count on each click, but not longer need to do this as the children.length catches this
@@ -180,15 +185,52 @@ function strikeThru(e) {
     }
 }
 
-// button click listener
+function removeItemsAfterClick(e) {
+    var whatID = e.target.id;
+    if (whatID > 0 && whatID.classList === 'deleteMe') {
+        document.getElementById(whatID).classList.toggle('delete'); 
+          if (classList === 'delete') {
+            document.write.appendChild('');
+        }
+    }
+    
+    /* if (e.target.classList === 'deleteMe') {
+        e.target.parentElement.remove();
+    } */
+    
+    //var whatID = e.target.id;
+    /* if (whatID > 0) {
+        document.getElementById(whatID).classList.toggle('delete'); 
+          if (classList === 'delete') {
+            document.write.appendChild('');
+        }
+    } */
+
+    /* deleteButton.addEventListener("click", function() {
+        item.remove()
+     }) */
+
+    /* if (whatID > 0) {
+        ul.removeChild(whatID.target.parentElement);
+    } */
+}
+
+function doneOrDelete(e) {
+    strikeThru(e);
+    removeItemsAfterClick(e);
+}
+
+// button (add things) click listener
 button.addEventListener('click', addListItemsAfterClick);
 
 // listener for the enter key (so don't need mouse clicks)
 userInput.addEventListener('keypress', addListItemsAfterEnter);
 
 // strike off a completed item
-ul.addEventListener('click', strikeThru);
+ul.addEventListener('click', doneOrDelete); 
 
+// button (remove things) click listener
+//removeItems.addEventListener('click', removeItemsAfterClick);
 
 // identify which item was clicked
 
