@@ -137,7 +137,46 @@ userInput.addEventListener('keypress', function(event) {
 }); // I realise this is probably because I am performing against the UL not the individual LI item...
  */
 
+//function removeItemsAfterClick(e) {
 
+    
+    //var listOfItems = document.getElementById('shoppingList');
+    //var whatID = e.target.id;
+
+/*     listOfItems.removeChild(listOfItems.whatID);
+
+
+    
+    if (whatID > 0 && whatID.classList === 'deleteMe') {
+        console.log('are we clicking this?');
+        document.write.appendChild('');
+
+        
+    } */
+
+    /* if (classList === 'deleteMe') {
+            document.write.appendChild('');
+        } */
+    /* if (e.target.classList === 'deleteMe') {
+        e.target.parentElement.remove();
+    } */
+    
+    //var whatID = e.target.id;
+    /* if (whatID > 0) {
+        document.getElementById(whatID).classList.toggle('delete'); 
+          if (classList === 'delete') {
+            document.write.appendChild('');
+        }
+    } */
+
+    /* deleteButton.addEventListener("click", function() {
+        item.remove()
+     }) */
+
+    /* if (whatID > 0) {
+        ul.removeChild(whatID.target.parentElement);
+    } */
+//}
 
 var button = document.getElementById('addItemToList');
 var userInput = document.getElementById('userInputBox');
@@ -152,7 +191,11 @@ function createListElement() {
     var li = document.createElement('li');
     var idNo = ul.children.length + 1;
     var delBtn = document.createElement('button');
+    var div = document.createElement("div");
 
+    div.classList.add("wrapper");
+    ul.appendChild(div);
+    div.append(li, delBtn);
     li.appendChild(document.createTextNode(userInput.value));
     delBtn.innerHTML = 'Delete this item';
     delBtn.classList.add('deleteMe');
@@ -186,34 +229,10 @@ function strikeThru(e) {
 }
 
 function removeItemsAfterClick(e) {
-    var whatID = e.target.id;
-    if (whatID > 0 && whatID.classList === 'deleteMe') {
-        document.getElementById(whatID).classList.toggle('delete'); 
-          if (classList === 'delete') {
-            document.write.appendChild('');
-        }
-    }
-    
-    /* if (e.target.classList === 'deleteMe') {
-        e.target.parentElement.remove();
-    } */
-    
-    //var whatID = e.target.id;
-    /* if (whatID > 0) {
-        document.getElementById(whatID).classList.toggle('delete'); 
-          if (classList === 'delete') {
-            document.write.appendChild('');
-        }
-    } */
 
-    /* deleteButton.addEventListener("click", function() {
-        item.remove()
-     }) */
-
-    /* if (whatID > 0) {
-        ul.removeChild(whatID.target.parentElement);
-    } */
+    this.parentElement.remove(); // this doesn't work, but a day pretty much wasted on this one thing is a waste, moving on to next challenge!
 }
+
 
 function doneOrDelete(e) {
     strikeThru(e);
