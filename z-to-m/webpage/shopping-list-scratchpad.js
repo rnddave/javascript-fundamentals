@@ -153,6 +153,13 @@ userInput.addEventListener('keypress', function(event) {
 }
  */
 
+/* ul.addEventListener('click', function () {
+    alert('this UL item was clicked');
+    ul.classList.add('done'); // unfortunately this marks all the UL items as done! 
+}); // I realise this is probably because I am performing against the UL not the individual LI item...
+ */
+
+
 
 var button = document.getElementById('addItemToList');
 var userInput = document.getElementById('userInputBox');
@@ -165,11 +172,13 @@ function inputLengthCheck() {
 
 function createListElement() {
     var li = document.createElement('li');
+    var idNo = ul.children.length + 1;
     li.appendChild(document.createTextNode(userInput.value));
     ul.appendChild(li);
+    li.setAttribute("id", +idNo);
     //li.id.add('${idNo}');
     userInput.value = ''; // this clears the input box after input
-    //idNo++;
+    //idNo++; // originally trying to count on each click, but not longer need to do this as the children.length catches this
 }
 
 function addListItemsAfterClick() {
@@ -192,15 +201,26 @@ button.addEventListener('click', addListItemsAfterClick);
 userInput.addEventListener('keypress', addListItemsAfterEnter);
 
 // strikethru on completed items
-/* ul.addEventListener('click', function () {
-    alert('this UL item was clicked');
-    ul.classList.add('done'); // unfortunately this marks all the UL items as done! 
-}); */ // I realise this is probablyh because I am performing against the UL not the individual LI item...
 
-li.addEventListener('click', function () {
-    alert('this UL item was clicked');
-    li.classList.add('done'); // unfortunately this marks all the UL items as done! 
-});
+ul.addEventListener('click', function(e) {
+    console.log('you clicked LI element with the ID Number: ' + e.target.id );  // after MANY attempts, this at least detects and displays the ID No. of the LI item clicked
+}, false);
+
+/* ul.addEventListener('click', function () {
+    alert('this UL item was clicked ' + idNo);
+    ul.classList.add('done'); // unfortunately this marks all the UL items as done! 
+}); */
+
+/* ul.addEventListener('click', function(){
+    console.log(this.li);
+}) */
+
+
+
+/* li.addEventListener('click', function() {
+    console.log(li.value);
+}) */
+
 
 
 
