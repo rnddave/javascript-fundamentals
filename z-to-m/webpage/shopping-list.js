@@ -32,6 +32,13 @@ function addListItemsAfterEnter(event) {
     }
 }
 
+function strikeThru(e) {
+    var whatID = e.target.id;
+    if (whatID > 0) {
+        document.getElementById(whatID).classList.toggle('done'); // from Stack Overflow - so damn simple :-/
+    }
+}
+
 // HOW DO WE GET THOSE INPUTS?
 
 // button click listener
@@ -40,4 +47,5 @@ button.addEventListener('click', addListItemsAfterClick);
 // listener for the enter key (so don't need mouse clicks)
 userInput.addEventListener('keypress', addListItemsAfterEnter);
 
-
+// strike off a completed item
+ul.addEventListener('click', strikeThru);
