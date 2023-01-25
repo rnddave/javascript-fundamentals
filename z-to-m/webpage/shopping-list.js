@@ -15,8 +15,10 @@ function inputLengthCheck() {
 // create a new LI and add the new userInput item to the list
 function createListElement() {
     var li = document.createElement('li');
+    var idNo = ul.children.length + 1;
     li.appendChild(document.createTextNode(userInput.value));
     ul.appendChild(li);
+    li.setAttribute("id", +idNo);
     userInput.value = ''; // this clears the input box after input
     
 }
