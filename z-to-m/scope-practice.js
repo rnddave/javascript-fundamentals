@@ -5,7 +5,7 @@ function q1() {
     if(a > 1) {
         a = 3;
     }
-    alert(a);   // GUESS [ 3 ] | ANSWER {  }
+    alert(a);   // GUESS [ 3 ] | ANSWER { 3 }
 }
 
 //#2
@@ -15,7 +15,7 @@ function q2() {
 }
 
 function q22() {
-    alert(a);   // GUESS [ 5 ] | ANSWER {  }
+    alert(a);   // GUESS [ 5 ] | ANSWER { 5 }
 }
 
 
@@ -26,20 +26,20 @@ function q3() {
 
 
 function q32() {
-    alert(a);   // GUESS [ undefined ] | ANSWER {  }
+    alert(a);   // GUESS [ undefined ] | ANSWER { hello }   GOT IT WRONG
 }
 
 //#4
 var a = 1;
 function q4() {
     var a = "test";
-    alert(a);   // GUESS [ 'test' ] | ANSWER {  }
+    alert(a);   // GUESS [ 'test' ] | ANSWER { test }
 }
 
 //#5
 var a = 2;
 if (true) {
     var a = 5;
-    alert(a);   // GUESS [ 5 ] | ANSWER {  }
+    alert(a);   // GUESS [ 5 ] | ANSWER { 5 }
 }
-alert(a);   // GUESS [ 2 ] | ANSWER {  }
+alert(a);   // GUESS [ 2 ] | ANSWER { 5 }   GOT IT WRONG
