@@ -33,6 +33,9 @@ color1.addEventListener('input', changeColor());
 
 color2.addEventListener('input', changeColor()); */
 
+css.innerHTML = (color1.value + ' ' + color2.value); // so this works, but there is a more interesting way of doing this
+// css.textContent = body.style.background + ';';
+
 function changeColor() {
     body.style.background = 
         'linear-gradient(to right, ' 
@@ -40,8 +43,13 @@ function changeColor() {
         + ', ' 
         + color2.value 
         +')';
+        
+        // css.innerHTML = (color1.value + ' ' + color2.value); // so this works, but there is a more interesting way of doing this
+        css.textContent = body.style.background + ';';
+
 }
 
 color1.addEventListener('input', changeColor); // I was calling the function() - the first pass through basically broke it
 
 color2.addEventListener('input', changeColor); // we want it to be called every time (based on input) so we removed the () from the end of the function
+
