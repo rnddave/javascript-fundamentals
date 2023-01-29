@@ -6,6 +6,8 @@
 
 condition ? expresion1 : expression2;
 
+
+
 CONDITION ? 
 ifTrue = expression1
 else = expression2
@@ -17,7 +19,7 @@ example:
 function userValid(bool) {
     return bool;
 
-    
+
 }
 
 var answer = userValid(true) ? 'Welcome' : 'Go away';
