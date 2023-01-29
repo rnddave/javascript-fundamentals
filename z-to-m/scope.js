@@ -18,7 +18,7 @@ function funerFunction() {
 
 function funestFunction() {
     //child scope
-    fun = 'What?';  // lloks like this updated the global variable
+    fun = 'What?';  // looks like this updated the global variable
     console.log(6, fun);
 }
 
