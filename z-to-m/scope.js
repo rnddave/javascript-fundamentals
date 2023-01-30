@@ -22,6 +22,7 @@ function funestFunction() {
     console.log(6, fun);
 }
 
+
 console.log(1, fun);
 funFunction();
 console.log(3, fun);
