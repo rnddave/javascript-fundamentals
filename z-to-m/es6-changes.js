@@ -69,3 +69,20 @@ function greetMe(name='', hasChildren=Boolean, from='') { // these are basically
 
 // or can call greetMe('John', false, 'America') and will get second IF statement
 
+// so I could improve my defaults: 
+
+function greetMe(name='DaWei', hasChildren=Boolean, from='UK') { // these are basically default values
+    if (hasChildren === true) {
+        return `Hey ${name}, how is it in ${from} and how are the kids?`
+    } else {
+        return `Hey ${name}, how is it in ${from}?`
+    }
+}
+
+
+/* greetMe()
+'Hey DaWei, how is it in UK?'
+greetMe('David', true, 'China')
+'Hey David, how is it in China and how are the kids?'
+greetMe('John', false, 'America')
+'Hey John, how is it in America?' */
