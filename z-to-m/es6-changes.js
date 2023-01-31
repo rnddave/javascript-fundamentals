@@ -10,3 +10,7 @@ if (exp > 90) {
     // let wizardLevel = true; // this won't work as this is a local variable
     wizardLevel = true;
 }
+
+
+
+
