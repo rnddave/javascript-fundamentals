@@ -53,6 +53,24 @@ multiplyByPi(15); // 47.1 [ 15 * 3.14 ]
 
 // -0-0-0-0-// -0-0-0-0-// -0-0-0-0-// -0-0-0-0-// -0-0-0-0-// -0-0-0-0-// -0-0-0-0- //
 
+// COMPOSE
+
+// act of putting 2 FUNCTIONS together to create a THIRD function where the OUTPUT of one is the INPUT of another ??????????????
+
+// head hurts
+
+const composeExample = (f, g) => (h) => f(g(h));
+// wtf
+
+// what is happening here? 
+// f is a function
+// g is a function (look at the colours)
+
+const sumCompose = (num) => num + 1;
+
+composeExample(sumCompose, sumCompose)(5); // 7
+
+// what the actual fuck is going on here!
 
 
 
