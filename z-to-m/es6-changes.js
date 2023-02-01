@@ -86,3 +86,53 @@ greetMe('David', true, 'China')
 'Hey David, how is it in China and how are the kids?'
 greetMe('John', false, 'America')
 'Hey John, how is it in America?' */
+
+// -0-0-0-0-0-0-0-0-0-0-0-0-0-
+
+// javascript TYPES = SYMBOL 
+
+// not really used very often
+
+let sym1 = Symbol();
+let sym2 = Symbol('foo');
+let sym3 = Symbol('foo');
+
+sym2 === sym3; // false - refer to unique memory objects
+
+let string1 = 'foo';
+let string2 = 'foo';
+
+string1 === string2; // true - different objects but still match? 
+
+// this is really not seen very often in the wild tbh. 
+
+// -0-0-0-0-0-0-0-0-0-0-0-0-
+
+// ARROW FUNCTIONS
+
+// we've seen this in REACT already, but wasn't clear before 
+
+// previously 
+
+function addAB(a, b) {
+    return a+b;
+}
+
+// arrow function would make it look like this
+
+const addAb = (a, b) => a + b;
+
+/*
+function addAB(a, b) {
+    return a+b;
+}
+
+const addAb = (a, b) => a+b;
+
+
+addAB(4, 5);
+9
+
+addAb(5, 4);
+9
+*/
