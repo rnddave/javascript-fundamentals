@@ -72,6 +72,27 @@ composeExample(sumCompose, sumCompose)(5); // 7
 
 // what the actual fuck is going on here!
 
+// -0-0-0-0-// -0-0-0-0-// -0-0-0-0-// -0-0-0-0-// -0-0-0-0-// -0-0-0-0-// -0-0-0-0- //
+
+// important to remember
+
+// avoid side affects
+/*
+DONT AFFECT OUTISDE WORLD IF POSSIBLE 
+DONT USE FUNCTIONS TO UPDATE GLOBAL VARs FOR EXAMPLE 
+ */
+
+// function purity
+/*
+avoid side affects
+return something
+= DETERMINISTIC 
+
+this means that if we always input X,Y parameters then we ALWAYS get the same thing returned
+
+this avoids random bugs
+
+*/
 
 
 
