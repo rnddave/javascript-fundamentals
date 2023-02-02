@@ -52,6 +52,36 @@ const mapArr2 = array.map(elem => elem*elem);
 const filteredArr = mapArr2.filter(elem => elem > 10); // create a new array that filters out only the elements that are greater than 10
 
 
+// -0-0-0- -0-0-0-0- -0-0-0- -0-0-0-0- -0-0-0- \\ 
+
+// REDUCE \\
+
+const arrayForReduce = [ 1, 3, 5, 6, 7, 8,9,2,4,3,1,232,32,4,5,6565,7,8,9 ];
+
+arrayForReduce.sort(); // interestingly this did not sort as I expected, it sorted it by first digit, therefore seeing 1, 2, 232, 3 as being an appropriate order, which was not as I imagined
+// FROM DOCS >> the array is sorted according to each character's Unicode code point value, according to the string conversion of each element.
+
+// let me try this: 
+
+arrayForReduce.sort((a, b) => a - b); // THIS DOES INDEED WORK AS I IMAGINED 
+
+// JavaScript’s reduce method is one of the cornerstones of functional programming. 
+// Use it when: You have an array of amounts and you want to add them all up.
+
+const arrayHasReduced = arrayForReduce.reduce((total, elem) => total + elem);
+
+// so what this does is essentially do a running total, read like this
+// total = 0
+// get first element = 1
+// add element to total = 1
+// total = 1
+// get the next element = 1
+// add element to total = 2
+// total = 2
+// and so on until all elements have been added to the total
+
+
+
 
 
 
