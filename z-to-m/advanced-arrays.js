@@ -17,3 +17,15 @@ arrSqrd;
 const mapArr = array.map((elem) => {
     return elem*elem;
 });
+
+// whats the difference between forEach and Map? 
+// if you're going through an array and want a new array - use MAP() 
+// map() has a restriction on operation, it EXPECTS a RETURN 
+
+// map iterates, apply the operation on each element and then store the result into a new collection 
+// in other words map transfors the array (creates a new array)
+
+// VS foreach() which can do any number of actions, but it doesn't have to return anything
+// remember to avoid sideaffects , foreach can introduce side affects
+// VS with map(), side affects are theoretically gone because have to return something 
+
