@@ -49,7 +49,14 @@ const array = [
 
   //Create an array using map that has all the usernames with a "? to each of the usernames
   
-  
+let newArray3 = [];
+const mapArr = array.map(user => {
+    let { username } = user; 
+    usernameQ = username + "?";
+    newArray3.push(usernameQ);
+});
+console.log(newArray3);
+
   //Filter the array to only include users who are on team: red
   
   
