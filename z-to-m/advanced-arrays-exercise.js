@@ -1,4 +1,5 @@
 // Complete the below questions using this array:
+
 const array = [
     {
       username: "john",
