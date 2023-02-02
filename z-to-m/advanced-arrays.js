@@ -47,6 +47,10 @@ const mapArr2 = array.map(elem => elem*elem);
 
 // -0-0-0- -0-0-0-0- -0-0-0- -0-0-0-0- -0-0-0- \\ 
 
+// FILTER \\
+
+const filteredArr = mapArr2.filter(elem => elem > 10); // create a new array that filters out only the elements that are greater than 10
+
 
 
 
