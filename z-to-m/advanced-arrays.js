@@ -80,6 +80,30 @@ const arrayHasReduced = arrayForReduce.reduce((total, elem) => total + elem);
 // total = 2
 // and so on until all elements have been added to the total
 
+// from VIDEO
+
+// can do filtering and mapping (somehow) 
+// const newArray = array.reduce((accumulator, element))
+
+// you can specify a default value for the accumulator 
+
+const newReducedArray = array.reduce((accum, elem) => accum + elem, 5); // the 5 at the end changes accumulator from 0 to 5 (don't know why you want to do this )
+
+// the Reduce Method In JavaScript​ gives you a mini CodePen where you can write whatever logic you want. It will repeat the logic for each amount in the array and then return a single value.
+
+// you don’t always have to return a single value. You can reduce an array into a new array.
+
+const anotherNewArryBoo = arrayForReduce.reduce((accum, elem) => {accum.push(elem*elem), []}); // can't get this to work as a one liner, will try breaking it up a bit. 
+
+const anotherNewArray = arrayForReduce.reduce((accum, elem) => {
+    accum.push(elem*elem);
+    return accum;
+}, []);
+
+/*
+anotherNewArray
+(19) [1, 1, 4, 9, 9, 16, 16, 25, 25, 36, 49, 49, 64, 64, 81, 81, 1024, 53824, 43099225]
+*/
 
 
 
