@@ -29,3 +29,44 @@ const mapArr = array.map((elem) => {
 // remember to avoid sideaffects , foreach can introduce side affects
 // VS with map(), side affects are theoretically gone because have to return something 
 
+// we're never mutating the original data in this example 
+
+/* BTW - IMPORTANT TO NOTE THESE ALTERNATIVES
+
+const mapArr = array.map(elem => { // NOTE THIS elem IS NO LONGER IN BRACKETS, as only one parameter, don't need the brackets here
+    return elem*elem;
+});
+
+// but we can improve on this further still >>>> 
+
+const mapArr = array.map(elem => elem*elem); // how much tidier does this look?
+
+*/
+
+const mapArr2 = array.map(elem => elem*elem);
+
+// -0-0-0- -0-0-0-0- -0-0-0- -0-0-0-0- -0-0-0- \\ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
