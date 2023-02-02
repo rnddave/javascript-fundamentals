@@ -7,6 +7,13 @@ const arrSqrd = []; // making my empty array
 const newArr = array.forEach((elem) => { // for each element do the arrow function
     // console.log(elem*elem); // console.log (elem^2)
     arrSqrd.push(elem*elem); // populate the previously defined empty array
-})
+});
 
 arrSqrd;
+
+// lets look at MAP, FILTER, REDUCE
+// probably most commonly used arrays in JS
+
+const mapArr = array.map((elem) => {
+    return elem*elem;
+});
