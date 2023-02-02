@@ -30,7 +30,23 @@ const array = [
   
   //Create an array using forEach that has all the usernames with a "!" to each of the usernames
   
+/*   const usernamesArr = array.forEach((elem) => {
+    const x = usernamesArr.prop1;
+    console.log(x);
+    //usernamesArr.push(elem.username);
+  }); */
+
+  // // // // // - COULDN'T FIGURE IT OUT SO LOOKED AT SOLUTION :-( \\ \\ \\ \\ \\
+
+  let newArray2 = []
+  array.forEach(user => {
+      let { username } = user; // this is essentially the main bit I couldn't figure out!!! FUCKER!
+      usernameBang = username + "!";
+      newArray2.push(usernameBang);
+  })
+  console.log(newArray2);
   
+
   //Create an array using map that has all the usernames with a "? to each of the usernames
   
   
