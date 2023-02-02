@@ -81,6 +81,13 @@ const filterArray = array.filter(user => {
 
   
   //Find out the total score of all users using reduce
+
+// let reducedArr = [];
+const reducedArr = array.reduce((accum, elem) => {
+    return accum + elem.score
+}, 0);
+console.log(reducedArr);
+
   
   // (1), what is the value of i?
   // (2), Make this map function pure:
