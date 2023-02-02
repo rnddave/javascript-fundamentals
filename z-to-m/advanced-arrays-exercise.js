@@ -86,16 +86,21 @@ const filterArray = array.filter(user => {
 const reducedArr = array.reduce((accum, elem) => {
     return accum + elem.score
 }, 0);
-console.log(reducedArr);
+console.log(reducedArr); // aided by the solution
 
   
   // (1), what is the value of i?
-  // (2), Make this map function pure:
-  const arrayNum = [1, 2, 4, 5, 8, 9];
-  const newArray = arrayNum.map((num, i) => {
-      console.log(num, i);
-      alert(num);
-      return num * 2;
-  })
+
+// GUESS { 58 } // ACTUAL [ 5 ] // it seems this is just an index count ???? // correct, indeed the index
+
+  // (2), Make this map function pure: // I think just disable the alert and console log
+const arrayNum = [1, 2, 4, 5, 8, 9];
+const newArray = arrayNum.map((num, i) => {
+    //console.log(num, i);
+    //alert(num);
+    return num * 2;
+}); // this is correct
   
   //BONUS: create a new list with all user information, but add "!" to the end of each items they own.
+
+  
