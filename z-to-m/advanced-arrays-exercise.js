@@ -50,15 +50,34 @@ const array = [
   //Create an array using map that has all the usernames with a "? to each of the usernames
   
 let newArray3 = [];
+
 const mapArr = array.map(user => {
     let { username } = user; 
     usernameQ = username + "?";
     newArray3.push(usernameQ);
 });
+
 console.log(newArray3);
 
   //Filter the array to only include users who are on team: red
   
+/* 
+let newArray4 = [];
+
+const filterArr = array.filter((user, team) => {
+    let { username } = user; 
+    let { team } = team;
+    userOnRed = if (team === 'red'), username ;
+    newArray4.push(useronRed);
+});
+
+console.log(newArray4); 
+*/
+
+const filterArray = array.filter(user => {
+	return user.team === "red";
+}); // got this from solution - not sure why I'm not getting these advanced array concepts
+
   
   //Find out the total score of all users using reduce
   
