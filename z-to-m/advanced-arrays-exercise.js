@@ -78,6 +78,7 @@ const filterArray = array.filter(user => {
 	return user.team === "red";
 }); // got this from solution - not sure why I'm not getting these advanced array concepts
 
+
   
   //Find out the total score of all users using reduce
   
