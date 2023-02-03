@@ -103,4 +103,22 @@ const newArray = arrayNum.map((num, i) => {
   
   //BONUS: create a new list with all user information, but add "!" to the end of each items they own.
 
-  
+
+/* THIS DOES NOT WORK 
+
+array.forEach(user => {
+    //let { username } = user; 
+    objectBang = user.items + "!";
+    newArray79.push(objectBang);
+})
+console.log(newArray79); 
+
+*/
+
+const itemBang = array.map(user => {
+	user.items = user.items.map(item => {
+		return item + "!"
+	});
+	return user;
+});
+console.log(itemBang);
