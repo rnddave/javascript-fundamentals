@@ -76,17 +76,4 @@ console.log('quantity = ' + quantity2);
 console.log('line price = ' + price);
 console.log('total = £' + bill2);
 
-// LETS DO SOME CONDITIONAL STATEMENTS
-
-function goToOffice (weather) {
-    if (weather === 'raining') {
-        console.log('don\'t forget the umbrella');
-    } else if (weather === 'snow') {
-        console.log('work from home');
-    } else {
-        console.log('enjoy the walk');
-    }
-}
-
-goToOffice('raining');
 
