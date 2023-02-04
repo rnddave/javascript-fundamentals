@@ -60,13 +60,16 @@ function taxOwedFunc (taxband) {
         beforeTax = salary - taxFree;
 
         twoTaxBands = salary - taxBandLower; 
-        
+
         lowerTax = beforeTax*0.2;
         console.log('lower tax = ' + lowerTax);
+
         upperTax = twoTaxBands*0.4;
         console.log('upper tax = ' + upperTax);
+
         taxOwed = lowerTax + upperTax;
         console.log('you will owe £' + taxOwed);
+        
         takeHome = salary - taxOwed;
         alert('your takehome pay = £' + takeHome);
         console.log('your takehome pay = £' + takeHome);
