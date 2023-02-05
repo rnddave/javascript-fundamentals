@@ -152,7 +152,58 @@ objC1 === objC3; // false
 objC2.c = 'boo';
 console.log(objC1, objC2, objC3); // {a: 1, b: 2, c: 'boo'} {a: 1, b: 2, c: 'boo'} {a: 1, b: 2, c: 4}
 
+// there is a newer way of cloning objects, even cleaner code: 
+let cloneObj = {...objC2};
+objC2 === cloneObj; // false
+console.log(objC2, cloneObj); // same contents, but again can be modified independent 
 
+// this is sometimes known as a shallow clone. 
+// the problem comes if you want to clone an object that has another object in it....
+// for this we need JSON stringify, which is super odd......... 
+
+let objC9 = {a: 1, b: 2, c: 3, d: {deep: "deep object"}};
+let cloneObjC9 = {...objC9}; 
+console.log(objC9, cloneObjC9);
+// so they should now be two different objects: 
+cloneObjC9 === objC9 // false
+// but there is still a reference, if I change the original objects deep object, it will update even the clone.... 
+cloneObjC9.d.deep = 'what happens when I change a deep object?';
+console.log(objC9, cloneObjC9);
+/*{a: 1, b: 2, c: 3, d: {…}}a: 1b: 2c: 3d: {deep: 'what happens when I change a deep object?'}[[Prototype]]: Object {a: 1, b: 2, c: 3, d: {…}}a: 1b: 2c: 3d: {deep: 'what happens when I change a deep object?'}[[Prototype]]: Object
+*/ 
+cloneObjC9 === objC9 // false
+// so are they now linked again? 
+objC9.a = 99;
+console.log(objC9, cloneObjC9); // no they are not linked, but the deep objects are linked. 
+
+// the way to deal with this is to use JSON.stringify to convert the object into strings, and then make a new object from it 
+// this will give you 2 objects that are no longer connected at the deep object state, HOWEVER, if this was  large object or had a very deep object within, it would be a memory hog, a real performance killer. 
+// can be done, but use with care!! 
+
+
+let objC79 = {a: 1, b: 2, c: 3, d: {deep: "the new deep object"}};
+
+let objC79Clone = JSON.parse(JSON.stringify(objC79));
+
+objC79.d.deep = 'what happens when I change a deep object?';
+console.log(objC79, objC79Clone);
+/* 
+{a: 1, b: 2, c: 3, d: {…}}
+a: 1
+b: 2
+c: 3
+d: {deep: 'what happens when I change a deep object?'}
+[[Prototype]]: Object
+ 
+{a: 1, b: 2, c: 3, d: {…}}
+a: 1
+b: 2
+c: 3
+d: {deep: 'the new deep object'}
+[[Prototype]]: Object
+*/
+
+// they are now completely independent, so this is a GOOD TO KNOW, but it is a performance killer on big or deep objects. 
 
 
 
