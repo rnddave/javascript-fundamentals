@@ -69,12 +69,13 @@ function taxOwedFunc (taxband) {
 
         taxOwed = lowerTax + upperTax;
         console.log('you will owe £' + taxOwed);
-        
+
         takeHome = salary - taxOwed;
         alert('your takehome pay = £' + takeHome);
         console.log('your takehome pay = £' + takeHome);
     }
 }
+
 
 /* salary = prompt('what is your salary? ');
 console.log(salary);
