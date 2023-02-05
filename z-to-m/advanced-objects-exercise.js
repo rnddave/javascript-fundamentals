@@ -32,21 +32,18 @@ console.log(objectZ1, objectZ2, objectZ3, objectZ4);
 //#3 create two classes: an Animal class and a Mamal class. 
 // create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color. 
 
-class Mamal {
-    constructor(name, type) {
+class Animal {
+    constructor(name, type, color, sound) {
         this.name = name;
         this.type = type;
-    }
-    common() {
-        console.log(`Did you know that all mamals even me, ${this.name}, produce their own milk for their young, at least I think so anyway`);
+        this.color = color;
+        this.sound = sound;
     }
 }
 
-class Animal extends Mamal{
+class Mamal extends Animal{
     constructor(name, type, color, sound) {
-        super(name, type);
-        this.color = color;
-        this.sound = sound;
+        super(name, type, color, sound);
     }
     whatAmI () {
         console.log(`I am a ${this.color} ${this.type} and my name is ${this.name}, I make a ${this.sound} sound`);
@@ -54,5 +51,5 @@ class Animal extends Mamal{
     }
 }
 
-const cow = new Animal('Flossie', 'cow', 'brown', 'moo');
+const cow = new Mamal('Flossie', 'cow', 'brown', 'moo');
 cow.whatAmI();
