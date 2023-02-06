@@ -121,16 +121,55 @@ let obj = {
 */
 
 
+// #1) Line up the Turtle and the Rabbit at the start line:
+const startLine = '     ||<- Start line';
+let turtle = 'ðŸ¢';
+let rabbit = 'ðŸ‡';
+
+/* 
+// it should look like this:
+'     ||<- Start line'
+'       ðŸ¢'
+'       ðŸ‡'
+ */
+
+// when you do:
+console.log(startLine);
+console.log(turtle.padStart(11));
+console.log(rabbit.padStart(11)); 
+
+// #2) What happens when you run turtle.trim().padEnd(9, '=') on the turtle variable
+// Read about what the second parameter does in padEnd and padStart
+turtle = turtle.trim().padEnd(9, '='); // 'ðŸ\x90¢====='
+// the padEnd (9) = if the length of the string is not 9 char, then add second parameter to equal len 9
+// therefore if it had said padEnd(15) there would be more === at the end
+// for eg
+let dog = '-||^>';
+dog; // '-||^>'
+
+dog2 = dog.trim().padEnd(15, ' woof');
+dog2; // '-||^> woof woof' [ 15 chars inc dog & spaces ]
+
+// The trim() method in JavaScript removes the whitespace from both ends of a string without changing the original string.
+
+// ----------------
+
+// #3) Get the below object to go from:
+let obj = {
+    my: 'name',
+    is: 'Rudolf',
+    the: 'raindeer'
+  }
+  // to this:
+  // 'my name is Rudolf the raindeer'
 
 
+Object.entries(obj).map(value => {       // for example, we want to remove the username from key
+    return value[0] + ' ' + value[1];
+}) // ['my name', 'is Rudolf', 'the raindeer']
 
-
-
-
-
-
-
-
+Object.entries(obj).map(value => value.join(" ")).join(' ') // from the solution page
+// my name is Rudolf the raindeer
 
 
 
