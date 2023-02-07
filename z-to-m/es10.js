@@ -185,6 +185,16 @@ freed; // [3]
 const userEmail3 = '     cannotfillemailformcorrectly@gmail.com   '
 const cleanUserEmail3 = userEmail3.trim();  //  'cannotfillemailformcorrectly@gmail.com'
 
+//#6 Turn the below users (value is their ID number) into an array: [ [ 'user1', 18273 ], [ 'user2', 92833 ], [ 'user3', 90315 ] ]
+const users = { user1: 18273, user2: 92833, user3: 90315 }
+usersArr = Object.entries(users);
+/*
+(3) [Array(2), Array(2), Array(2)]
+0: (2) ['user1', 18273]
+1: (2) ['user2', 92833]
+2: (2) ['user3', 90315]
+*/
+
 
 
 
