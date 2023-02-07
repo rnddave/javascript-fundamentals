@@ -195,8 +195,10 @@ usersArr = Object.entries(users);
 2: (2) ['user3', 90315]
 */
 
+//#7 change the output array of the above to have the user's IDs multiplied by 2 -- Should output:[ [ 'user1', 36546 ], [ 'user2', 185666 ], [ 'user3', 180630 ] ]
 
-
+const updatedUsersArray = usersArr.map((user) => [user[0], user[1] * 2])    // [ [ 'user1', 36546 ], [ 'user2', 185666 ], [ 'user3', 180630 ] ]
+// looked at solution for this
 
 
 
