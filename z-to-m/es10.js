@@ -37,3 +37,56 @@ deepArray.flat() // (4) [1, 2, 3, Array(4)]
 lessDeep = deepArray.flat(2); // (7) [1, 2, 3, 4, 5, 6, Array(3)]
 lessDeeper = deepArray.flat(3); // (9) [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
+// additional challenge - what if it's a really large array and you don't know how deep it goes, how would you flatten that in most efficient route possible? 
+
+/// ahh my old friend infinity... 
+
+let infiniteArray = [1, [2, 3, [4, 5, 6, [7, 8, 9,],],[1, [2, 3, [4, 5, 6, [7, 8, 9,],]],[1, [2, 3, [4, 5, 6, [7, 8, 9,]]]]]],[1, [2, 3, [4, 5, 6, [7, 8, 9,]]]],[[1, 2 ,3],[[1, 2 ,3],[4, 5, 6],[7,8,9]],[4, 5, 6],[7,8,9]]]; 
+
+// now I just copy and pasted loads of existing array values into here, so I don't even know how deep it is. 
+
+crushTheArray = infiniteArray.flat(Infinity); 
+//(54) [1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 1, 2, 3, 4, 5, 6, 7, 8, 9, 4, 5, 6, 7, 8, 9]
+
+/// =========== FlatMap() =================== \\\ 
+
+// a little hard to show with my examples, but allows you to both flatten an array and map at the same time, let's try it. 
+
+let infiniteArrayMapper = [1, [2, 3, [4, 5, 6, [7, 8, 9,],],[1, [2, 3, [4, 5, 6, [7, 8, 9,],]],[1, [2, 3, [4, 5, 6, [7, 8, 9,]]]]]],[1, [2, 3, [4, 5, 6, [7, 8, 9,]]]],[[1, 2 ,3],[[1, 2 ,3],[4, 5, 6],[7,8,9]],[4, 5, 6],[7,8,9]]]; 
+
+let mappyExample = infiniteArrayMapper.flatMap(elem => elem + ' thingy'); 
+// interestingly this didn't do exactly as I thought it would as it add ' thingy' to each layer of the array rather than to each emelent in the array.
+
+let infiniteArrayMapper = [1, [2, 3, [4, 5, 6, [7, 8, 9,],],[1, [2, 3, [4, 5, 6, [7, 8, 9,],]],[1, [2, 3, [4, 5, 6, [7, 8, 9,]]]]]],[1, [2, 3, [4, 5, 6, [7, 8, 9,]]]],[[1, 2 ,3],[[1, 2 ,3],[4, 5, 6],[7,8,9]],[4, 5, 6],[7,8,9]]]; 
+
+let mappyExample = infiniteArrayMapper.flatMap(elem => elem + ' depth Marker'); 
+// ['1 depth Marker', 
+// '2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,8,9 depth Marker', 
+// '1,2,3,4,5,6,7,8,9 depth Marker', 
+// '1,2,3,1,2,3,4,5,6,7,8,9,4,5,6,7,8,9 depth Marker']
+
+// flattens to a depth of 1
+
+/// =========== trimStart() & trimEnd() =================== \\\ 
+
+// these get rid of whitespace 
+
+const someUserInput0 = '            * david *'
+const someUserInput1 = '            * david *              '
+const someUserInput2 = '* david *             '
+
+console.log(someUserInput0.trimStart());    // * david *
+console.log(someUserInput1.trim());         // * david *
+console.log(someUserInput2.trimEnd());      // * david *
+
+// can trim just start, just end, or all wrapped whitespace 
+
+
+
+
+
+
+
+
+
+
