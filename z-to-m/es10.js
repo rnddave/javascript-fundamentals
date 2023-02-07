@@ -82,7 +82,46 @@ console.log(someUserInput2.trimEnd());      // * david *
 // can trim just start, just end, or all wrapped whitespace 
 
 
+/// =========== fromEntries() =================== \\\ 
 
+// video example suggests that somehow we have received an array of user details, but would prefer it as an object. 
+
+const gamePlayerDetails = [['david', 43, 'male', 'swindon'], ['xiao', 35, 'female', 'swindon'], ['colin', 5, 'male', 'swindon'], ['nolan', 1, 'male', 'swindon']];
+
+// now we want to migrate this to an object so that we can easily update values in future perhaps? 
+Object.fromEntries(gamePlayerDetails);  // {david: 43, xiao: 35, colin: 5, nolan: 1}
+// however by default that assumes we only expect a single key:value pair and it seems to discard the others... 
+// actually I was overzelous in my building of the example, it seems fromEntries only works on arrays of 2 (x: y, x: y)
+
+/// =========== try & catch =================== \\\ 
+
+try {
+    4*5
+} catch {
+    console.log('there was an error');
+}
+
+// let's throw some simple things at it
+
+try {
+    true + ' Hi';
+} catch {
+    console.log('Nope, that does not work');
+}
+
+// in this case, it will do type coercion = converting true to a string and concat so the first condition will work
+//  'true Hi'
+
+// but if we throw something at it that it hasn't seen, like an undeclared variable: 
+
+try {
+    whoIsThisVariable + ' Hi';
+} catch {
+    console.log('Nope, that does not work');
+}
+
+// we get second condition, the catcher :   
+//  Nope, that does not work
 
 
 
