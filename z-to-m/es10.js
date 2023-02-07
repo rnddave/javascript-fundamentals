@@ -181,6 +181,16 @@ const trapped = [[[[[[[[[[[[[[[[[[[[[[[[[[3]]]]]]]]]]]]]]]]]]]]]]]]]];
 const freed = trapped.flat(Infinity);
 freed; // [3]
 
+//#5 Clean up this email to have no whitespaces. Make the answer be in a single line (return a new string):
+const userEmail3 = '     cannotfillemailformcorrectly@gmail.com   '
+const cleanUserEmail3 = userEmail3.trim();  //  'cannotfillemailformcorrectly@gmail.com'
+
+
+
+
+
+
+
 
 
 
