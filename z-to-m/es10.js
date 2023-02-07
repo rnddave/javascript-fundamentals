@@ -152,6 +152,9 @@ const users = { user1: 18273, user2: 92833, user3: 90315 }
 
 */
 
+// #1 Turn this array into a new array: [1,2,3,[4],[5]]. Bonus if you can do it on one line
+const array = [[1],[2],[3],[[[4]]],[[[5]]]]
+array.flat(Infinity);   // (5) [1, 2, 3, 4, 5]
 
 
 
