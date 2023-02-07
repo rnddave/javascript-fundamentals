@@ -164,7 +164,17 @@ greeting.flat(); // this didn't work as output not exactly what was asked
 const greeting2 = greeting.flatMap(elem => elem.join(' ')); // [ 'Hello young grasshopper!', 'you are', 'learning fast!' ]
 // needed help from solution for this.
 
+//#3 Turn the greeting array above into a string: 'Hello young grasshopper you are learning fast!'
+const greeting3 = greeting2.toString();     // not quite >>  [ 'Hello young grasshopper!,you are,learning fast!' ]
+const greeting3b = greeting2.join(' ');     // 'Hello young grasshopper! you are learning fast!'    >> still have !
+// checked solution, they do it a different way, but also have the ! at end of first array 
 
+// solution =   >>      console.log(greeting.flatMap(x => x.join(' ')).join(' ')) 
+// I noticed that they are still working on greeting, where as I am working on the output of an already converted greeting.
+
+const greeting3c = greeting.join(' ');      // which wouldn't work  >>  'Hello,young,grasshopper! you,are learning,fast!'
+
+const greeting3d = greeting.flatMap(elem => elem.join(' ')).join(' ');      //  'Hello young grasshopper! you are learning fast!'
 
 
 
