@@ -156,6 +156,17 @@ const users = { user1: 18273, user2: 92833, user3: 90315 }
 const array = [[1],[2],[3],[[[4]]],[[[5]]]]
 array.flat(Infinity);   // (5) [1, 2, 3, 4, 5]
 
+// #2 Turn this array into a new array: [ 'Hello young grasshopper!', 'you are', 'learning fast!' ]
+const greeting = [["Hello", "young", "grasshopper!"], ["you", "are"], ["learning", "fast!"]];
+greeting.flat(); // this didn't work as output not exactly what was asked
+// ['Hello', 'young', 'grasshopper!', 'you', 'are', 'learning', 'fast!']    // note the coma between words differs from exampe
+
+const greeting2 = greeting.flatMap(elem => elem.join(' ')); // [ 'Hello young grasshopper!', 'you are', 'learning fast!' ]
+// needed help from solution for this.
+
+
+
+
 
 
 
