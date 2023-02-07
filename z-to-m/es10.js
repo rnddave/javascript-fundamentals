@@ -36,3 +36,4 @@ deepArray.flat() // (4) [1, 2, 3, Array(4)]
 
 lessDeep = deepArray.flat(2); // (7) [1, 2, 3, 4, 5, 6, Array(3)]
 lessDeeper = deepArray.flat(3); // (9) [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
