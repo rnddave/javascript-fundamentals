@@ -176,6 +176,11 @@ const greeting3c = greeting.join(' ');      // which wouldn't work  >>  'Hello,y
 
 const greeting3d = greeting.flatMap(elem => elem.join(' ')).join(' ');      //  'Hello young grasshopper! you are learning fast!'
 
+//#4 Turn the trapped 3 number into: [3]
+const trapped = [[[[[[[[[[[[[[[[[[[[[[[[[[3]]]]]]]]]]]]]]]]]]]]]]]]]];
+const freed = trapped.flat(Infinity);
+freed; // [3]
+
 
 
 
