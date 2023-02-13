@@ -20,6 +20,26 @@ number1 = Number.MAX_SAFE_INTEGER ;     // 9007199254740991
 
 // essentially the most JS can hold in memory (using the integer data type) 
 
+/*
+number1 = Number.MAX_SAFE_INTEGER ; 
+9007199254740991
+
+bigNum = number1 + Number.MAX_SAFE_INTEGER;
+18014398509481982
+
+typeof bigNum; 
+'number'
+
+bigerNum = bigNum * bigNum;
+3.2451855365842665e+32
+
+typeof bigerNum
+'number'
+
+// some really unexpected answer above, mostly, why it stays as a type number tbh. 
+*/
+
+
 
 
 
