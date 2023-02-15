@@ -40,6 +40,8 @@ typeof bigerNum
 */
 
 // ----------- Optional Chaining Operation ------------ \\ 
+// ----------- ?. [ Questionmark period ] ------------ \\ 
+// important to remember it can't check the end of the chain
 
 
 // so first we assume we have 2 similar objects: 
@@ -76,35 +78,49 @@ if (myPokemon2.pikachu && myPokemon2.pikachu.weight) { // if myPokemon2.pikachu 
 // this doesn't look nice, is complicated and can add a lot of code to your program
 // new way to do it... 
 
-let weight3 = myPokemon2?.pikachu?.weight;  // the ? is saying 'is there a myPokemon2? then is there a pikachu? then is there a weight
+let weight3 = myPokemon2?.pikachu?.weight;  // the ? is saying 'is there a myPokemon2? then is there a pikachu? then return weight
+                                    // again, important to remember, optional chaining doesnt check the end of the chain
 console.log(weight3);   // undefined
                         // so it doesn't throw an error, it gives the undefined. 
                         // it allows you to ask if a property exists 
                         // doesn't need the long complex if statements
 
 // ----------- Nullish Coalescing Operation ------------ \\ 
+// ----------- ?? [ Double Questionmark ] ------------ \\ 
 
+// can sometimes be used instead of the || [ OR ] operator
 
+let myPokemon3 = {
+    pikachu: {
+        species: 'mouse pokemon',
+        height: 0.4,
+        weight: 6.2,
+        power: 'lightening'       // this is a new property compared to previous examples
+    }
+}
 
+let myPokemon4 = {
+    pikachu: {                  // both of the new objects now have a pikachu, but one is missing power
+        species: 'mouse pokemon',
+        height: 0.8,
+        weight: 19.2
+    }
+}
 
+let myPokemon5 = {
+    pikachu: {
+        species: 'mouse pokemon',
+        height: 0.4,
+        weight: 6.2,
+        power: ''       // this is now an empty string
+    }
+}
 
+// in this case we want to pass optional parameters to check if power even exists
 
+// this evaluates if this is 'truthy'  - this is how JS works... 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let power = myPokemon3?.pikachu?.power || 'no power';   // lightening
+let power2 = myPokemon4?.pikachu?.power || 'no power';   // no power
+let power3 = myPokemon5?.pikachu?.power || 'no power';   // no power (because the string is empty)
 
