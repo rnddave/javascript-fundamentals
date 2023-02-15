@@ -124,3 +124,39 @@ let power = myPokemon3?.pikachu?.power || 'no power';   // lightening
 let power2 = myPokemon4?.pikachu?.power || 'no power';   // no power
 let power3 = myPokemon5?.pikachu?.power || 'no power';   // no power (because the string is empty)
 
+// but how does this relate to nullish coalescing? 
+
+// well the output is different, so forexample, let's evaluate some new objects: 
+
+let myPokemon6 = {
+    pikachu: {                  
+        species: 'mouse pokemon',
+        height: 0.8,
+        weight: 19.2
+                        // this one is missing power
+    }
+}
+
+let myPokemon7 = {
+    pikachu: {
+        species: 'mouse pokemon',
+        height: 0.4,
+        weight: 6.2,
+        power: ''       // this is now an empty string
+    }
+}
+
+let myPokemon8 = {
+    pikachu: {
+        species: 'mouse pokemon',
+        height: 0.4,
+        weight: 6.2,
+        power: 0       // this is now a number
+    }
+}
+
+let power6 = myPokemon6?.pikachu?.power ?? 'no power';   // no power (that property is actually missing)
+let power7 = myPokemon7?.pikachu?.power ?? 'no power';   // '' (returns the empty string)
+let power8 = myPokemon8?.pikachu?.power ?? 'no power';   // 0 (returns the numeric value)
+
+// the output of this is quite different from the output of the || operator 
