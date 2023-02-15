@@ -39,8 +39,50 @@ typeof bigerNum
 // some really unexpected answer above, mostly, why it stays as a type number tbh. 
 */
 
+// ----------- Optional Chaining Operation ------------ \\ 
 
 
+// so first we assume we have 2 similar objects: 
+
+let myPokemon = {
+    pikachu: {
+        species: 'mouse pokemon',
+        height: 0.4,
+        weight: 6.2
+    }
+}
+
+let myPokemon2 = {
+    raichu: {
+        species: 'mouse pokemon',
+        height: 0.8,
+        weight: 19.2
+    }
+}
+
+let weight = myPokemon.pikachu.weight;
+console.log(weight);
+
+let weight2 = myPokemon2.pikachu.weight;
+console.log(weight2); // this will result in a failure, because myPokemon2 does not have the Pikachu object)
+
+// so in the old ways, and in some old code, you will see that there are these checks that work through the object: 
+if (myPokemon2.pikachu && myPokemon2.pikachu.weight) { // if myPokemon2.pikachu exists AND .....
+    let weight2 = myPokemon2.pikachu.weight // then weight 2 = this
+} else {
+    let weight2 = undefined                 // else it is undefined 
+}
+
+// this doesn't look nice, is complicated and can add a lot of code to your program
+// new way to do it... 
+
+let weight3 = myPokemon2?.pikachu?.weight;  // the ? is saying 'is there a myPokemon2? then is there a pikachu? then is there a weight
+console.log(weight3);   // undefined
+                        // so it doesn't throw an error, it gives the undefined. 
+                        // it allows you to ask if a property exists 
+                        // doesn't need the long complex if statements
+
+// ----------- Nullish Coalescing Operation ------------ \\ 
 
 
 
