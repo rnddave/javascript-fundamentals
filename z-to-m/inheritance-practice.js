@@ -88,4 +88,67 @@ class NorwegianSpruce extends Conifer {
 let myXmasTreeHunt = new NorwegianSpruce(true, false, true, true, true);
 
 
+// someone on DISCORD proposed this, which I like: 
 
+/*
+
+class Plant {
+    constructor(alive, animal) {
+        this.alive = alive;
+        this.animal = animal;
+    }
+    
+    checkPlant() {
+        if (this.alive && !this.animal) {
+            console.log('this must be a plant');
+            return true;
+        }
+    }
+}
+
+class Tree extends Plant {
+    constructor(alive, animal, wood) {
+        super(alive, animal);
+        this.wood = wood;
+    }
+
+    checkWood() {
+        if (this.checkPlant() && this.wood) {     
+            console.log('this must be a tree');
+            return true;
+        }
+    }
+}
+
+class Conifer extends Tree {
+    constructor(alive, animal, wood, evergreen) {
+        super( alive, animal, wood);
+        this.conifer = evergreen;
+    }
+
+    checkEvergreen() {
+        if (this.checkWood() && this.conifer) {
+            console.log('this must be an evergreen tree');
+            return true;
+        }
+    }
+}
+
+class NorwegianSpruce extends Conifer {
+    constructor(alive, animal, wood, evergreen, xmasTree) {
+        super(alive, animal, wood, evergreen);
+        this.xmasTree = xmasTree;
+    }
+    
+    checkXmasTree() {
+        if (this.checkEvergreen() && this.xmasTree) {
+            console.log('this could be your xmas tree');
+            return true;
+        }
+    }
+}
+
+let myXmasTreeHunt = new NorwegianSpruce(true, false, true, true, true);
+myXmasTreeHunt.checkXmasTree();
+
+*/
