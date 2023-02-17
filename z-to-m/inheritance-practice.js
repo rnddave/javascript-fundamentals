@@ -88,6 +88,7 @@ class NorwegianSpruce extends Conifer {
 let myXmasTreeHunt = new NorwegianSpruce(true, false, true, true, true);
 
 
+
 // someone on DISCORD proposed this, which I like: 
 
 /*
