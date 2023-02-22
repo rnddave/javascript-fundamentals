@@ -18,7 +18,6 @@ arrayBegin.sort(function(a, b) {
 // sortedArr;   // [1, 1, 1, 1, 2, 2, 2, 4, 5, 10, 20, 20, 391, 392, 591]
 // console.log(arrayBegin);
 
-
 function cleanTheRoom (arr) {
     let startCount = 0;     // review this
 
@@ -67,4 +66,46 @@ cleanTheRoom(arrayHasStrData);
 arrayBeginWithStr;  // [1, 1, 1, 1, 2, 2, 2, 4, 5, 10, 20, 20, 391, 392, 591, 'd', 'a', 'v', 'i', 'd']
 // mind blown! 
 // it sorts, but doesn't create the new nested arrays and removes the string values in the middle of the array for some reason? 
+
+// ------------ MOVING ON ------------ \\ 
+
+/* 
+Question 2: Write a javascript function that takes an array of numbers and a target number. The function should find two different numbers in the array that, when added together, give the target number. For example: answer([1,2,3], 4)should return [1,3] 
+*/
+
+function doesItSum (arr, goal) {
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < arr.length; j++) {
+            if (arr[i] + arr[j] === goal) {
+                return console.log(`${arr[i]} + ${arr[j]} = ${goal}`)
+            }
+        }
+    }
+}
+
+const arrForSum = [1,2,3,4,5];
+doesItSum(arrForSum, 7);
+
+// this kind of works, but, it does allow the i to be duplicated... 
+/*
+doesItSum(arrForSum, 7);
+2 + 5 = 7
+
+doesItSum(arrForSum,9); 
+ 4 + 5 = 9
+
+doesItSum(arrForSum,15);
+undefined
+
+doesItSum(arrForSum,10);
+ 5 + 5 = 10
+
+doesItSum(arrForSum,3);
+ 1 + 2 = 3
+
+doesItSum(arrForSum,2);
+ 1 + 1 = 2
+*/
+
+
 
