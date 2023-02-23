@@ -122,15 +122,53 @@ function hexToRgb (val) {
 
 // SECOND ATTEMPT - thought of a simpler check - how many chars did I get? 
 function hexToRgb (val) {
+    let red = '';           // empty value for later
+    let green = '';         // empty value for later
+    let blue = '';          // empty value for later
+
     let stringy = val.toString();   // initially I want the input to be a string no matter what
     // console.log(typeof(stringy));    // no longer needed, just testing 
 
     if (stringy.length > 6) { 
-        console.log('this is a lazy check to see if I received a 6 char HEX value or a 9 char RGB value');
+        // console.log('this is a lazy check to see if I received a 6 char HEX value or a 9 char RGB value');
         // okay so now I have more than 6 char's and we're assuming RGB
-        // how do we splice this?
+        // now, let's slice this
+        red = stringy.slice(0,3);
+        green = stringy.slice(3,6);
+        blue = stringy.slice(6);
+        // console.log(`R ${red}, G ${green}, B ${blue}`) // just testing the slice works as I imagine
 
+        // now to convert to HEX
+        // okay at this point, it seems converting it to the string format was less useful, need to revisit and see if I can slice a number. 
+
+        let hexRed = Number(red).toString(16);
+        let hexGreen = Number(green).toString(16);
+        let hexBlue = Number(blue).toString(16);
+        // console.log(hexRed); // this works
+
+        console.log(`Your input was RGB [R ${red}, G ${green}, B ${blue}], and as HEX it looks like ${hexRed}${hexGreen}${hexBlue}` )
+        
     } else {
-        console.log('this must be a HEX');
+        console.log('this must be a HEX, so I will convert it as follows: ');
+        // annoyingly, I stumbled across a very easy way to do this which means there was probably a VERY simple way to do the above 
+        let toRGB = parseInt(stringy, 16);
+        console.log(toRGB); // this was when I first realised that my math is not working as expected. Let's try again
     }
 }
+
+// THIRD ATTEMPT
+
+function hexToRgb(val) {
+
+    if (isNaN(val)) {   // if we don't get a number, then we likely have an RGB
+        // do we have a hex? 
+        let toRGB = parseInt(val, 16);  // this converts a string to number in base 16
+        console.log(toRGB);     // this returns the RGB value
+    } else {
+        // we have an RGB ?
+        let toHex = val.toString(16);   // this converts val to a STRING and again we define a base 16 number
+        console.log(toHex);
+    }
+}       // did I actually complete this as such a simple function? 
+
+// granted there is no error checking, but this seems remarkably efficient
