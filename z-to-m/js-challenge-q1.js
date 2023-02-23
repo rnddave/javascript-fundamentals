@@ -110,14 +110,27 @@ doesItSum(arrForSum,2);
 // ------------ MOVING ON ------------ \\ 
 
 /*
-Question 3: Write a function that converts HEX to RGB. Then Make that function auto-dect the formats so that if you enter HEX color format it returns RGB and if you enter RGB color format it returns HEX.
-*/
+Question 3: Write a function that converts HEX to RGB. Then Make that function auto-dect the formats so that if you enter HEX color format it returns RGB and if you enter RGB color format it returns HEX. */
 
 
+// FIRST ATTEMPT - I WILL FIRST DECIDE IF I RECEIVED A HEX CHAR
+function hexToRgb (val) {
+    if (val.includes(A || B || C || D || E || F)) { // not sure if can use .includes() like this? 
+        console.log('has it');
+    }
+}
 
+// SECOND ATTEMPT - thought of a simpler check - how many chars did I get? 
+function hexToRgb (val) {
+    let stringy = val.toString();   // initially I want the input to be a string no matter what
+    // console.log(typeof(stringy));    // no longer needed, just testing 
 
+    if (stringy.length > 6) { 
+        console.log('this is a lazy check to see if I received a 6 char HEX value or a 9 char RGB value');
+        // okay so now I have more than 6 char's and we're assuming RGB
+        // how do we splice this?
 
-
-
-
-
+    } else {
+        console.log('this must be a HEX');
+    }
+}
