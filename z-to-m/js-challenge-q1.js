@@ -160,7 +160,7 @@ function hexToRgb (val) {
 
 function hexToRgb(val) {
 
-    if (isNaN(val)) {   // if we don't get a number, then we likely have an RGB
+    if (isNaN(val)) {   // if we don't get a number, then we likely have an HEX
         // do we have a hex? 
         let toRGB = parseInt(val, 16);  // this converts a string to number in base 16
         console.log(toRGB);     // this returns the RGB value
