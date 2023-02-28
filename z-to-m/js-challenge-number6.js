@@ -86,6 +86,9 @@ function doesItSum (arr, goal) {
 const arrForSum = [1,2,3,4,5];
 doesItSum(arrForSum, 7);
 
+
+
+
 // this kind of works, but, it does allow the i to be duplicated... 
 /*
 doesItSum(arrForSum, 7);
